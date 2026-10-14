@@ -1,100 +1,75 @@
-# DataQuire build report
+# DataQuire structural rebuild
 
-Verified locally on October 14, 2026. The Astro production build compiles, all 25 content routes and the 404 page render, and the estimator's four branches pass browser acceptance tests. The supplied webhook is configured and returned acknowledgments for two clearly marked synthetic integration submissions.
+Completed October 14, 2026, from foundation commit `40838f7`.
 
-This is a completed local implementation with an explicit launch-readiness audit, not a claim that every external launch requirement is satisfied. No deployment, commit, or push was performed.
+## Foundation and direction
 
-## Seven-point creative brief
+The first action was to inspect Git status and history. The unfinished Operating Memorandum changes were set aside with `git stash push --include-untracked` under the name “Set aside unfinished Operating Memorandum direction before structural rebuild”. That stash remains recoverable. Implementation restarted from the clean foundation, preserving its Astro architecture and business infrastructure.
 
-1. **Character:** archival, precise, composed. A gathered operating record, presented with the restraint of an advisor.
-2. **Typography:** locally hosted Fraunces 600/700 with 600 italic, paired with Instrument Sans 400/500/600/700. Large editorial headlines; compact labels and folios.
-3. **Color:** crisp white paper and near-black ink dominate. Cobalt #214FDB is the action color; #E6E8E4 rules and #E9EEFD accents stay cool. #070C0A grounds the cover and vault.
-4. **Composition:** a cinematic cover, generous margins, ruled ledgers, numbered custody, and increasingly specific evidence. Homepage folios run 00 through 14. No stock imagery, bento layout, or invented client logos.
-5. **Signature interaction:** the working de-identification exhibit replaces identifying text with role tokens while preserving the work's causal sequence. The adjacent copy states the limits of de-identification.
-6. **Motion:** one primary easing, 110 ms headline stagger, 1.1-second headline reveal, 0.8-second section reveals, 3.2-second industry rotation, 5-second demand notes, and one 30-second ticker. Pause and reduced-motion paths preserve the content.
-7. **Material:** matte white paper, crisp hairlines, framed document exhibits, a restrained dark grain, and an original three-leaf quire mark. Original SVGs supply the visual system instead of decorative illustrations.
+[Grepped](https://www.grepped.ai/) was inspected live in a browser and through source retrieval on October 14. Its offer, problem, catalog, process, and estimate progression informed the architecture. Its wording, yellow palette, pixel illustration, earnings claims, and seven-day payment promise were not copied.
 
-## Research and design decisions
+The original site had fifteen numbered homepage scenes, repetitive custody explanations, unverified market entries, conflicting timing copy, prominent speculative statistics, a buyer journey ending in a seller CTA, and fragile forced headline breaks. The rebuild uses five homepage sections:
 
-Reviewed the current [Awwwards directory](https://www.awwwards.com/websites/sites_of_the_day/) and [CSS Design Awards](https://www.cssdesignawards.com/), then inspected accessible examples [Neutomni](https://neutomni.com/) and [Lee Holmes](https://www.leeholmes.uk/). Useful principles were strong type hierarchy, decisive navigation, a structural recurring motif, numbered progression, and concrete evidence. Their palettes, loaders, pixel fonts, and ornamental interactions were not copied.
+1. An offer, one subheading with the illustrative $20K–$5M range, and one hero CTA to `/estimator`.
+2. A working-record claim and private/public data contrast, without invented AI performance statistics.
+3. Eight numbered record categories, led by legal, oil and gas, semiconductors, and game development; concrete source systems and qualification guidance, including the qualified 100+ employee upper-range context.
+4. Exactly three numbered process steps, one trust line, and an expandable hypothetical 30-day engagement walkthrough.
+5. A value-before-commitment estimator band: about two minutes, no file uploads, a private estimate, and an explicit explanation of early contact capture.
 
-[Grepped](https://grepped.ai/) informed the clarity of the systems-first intake and separation of holder, buyer, and referral journeys. [Protege](https://withprotege.ai/) was reviewed for its builder/provider content hierarchy. No external animation timings were measured or claimed. The referenced local visual-reference board was not available; the supplied HTML was treated as the quality floor, not as an instruction source or a layout to clone.
+The newsletter remains in the footer, preserving its original Ledger submission contract. The market ledger is an intentional “Contribute to the ledger” state, with no claimed transactions or visible unfinished entries.
 
-Original assets include the quire logo, nine vertical glyphs, three-span bridge, custody diagram, redaction specimen, favicon, social image, personal referral QR, flyer, and postcard. The final subtraction pass removed the extra dark homepage ending, glass-like navigation, duplicate form questions, and partner-asset links from the main navigation.
+## Brand and editorial system
 
-## Routes and features
+- Pale mineral `#e9f0ec`, deep teal `#153b43`, terracotta `#ae422b`, and white catalog surfaces.
+- Instrument Sans supplies the principal hierarchy, including display headlines. Fraunces italic provides focused emphasis. Fonts remain locally bundled and licensed through the existing font packages.
+- The established DataQuire name and quire mark remain. A lightweight original SVG expands that mark into gathered leaves. No image or animation dependency was added.
+- Broad contrast surfaces, restrained rules, numbered catalog entries, and simple native disclosures replace the Folio scene system.
+- Motion is limited to short feedback and navigation transitions. Pause motion and `prefers-reduced-motion` are supported.
+- Shared qualifications sit in one “Advisory & Legal Notes” drawer near the footer. Relevant contact-capture consent, result qualifications, and the hypothetical walkthrough label remain at the point of use.
 
-- Nine primary routes: `/`, `/estimator`, `/buyers`, `/verticals`, `/partners`, `/refer`, `/faq`, `/contact`, `/answers`.
-- Security and legal: `/security`, `/privacy`, `/terms`. Privacy and Terms are direct-link-only, noindex, and excluded from navigation and the sitemap. Attorney-review flags remain visible.
-- Partner assets: `/one-pager`, `/templates`, `/session`, `/dashboard`. Public workflows are co-branding/printing and a session request. Templates and dashboard access remain locked until a real identity service is connected; the dashboard specimen is explicitly demo data.
-- `/scout` is unlisted, with no inbound site navigation or sitemap entry.
-- Eight `/answers/*` articles are built. The reading room is not in launch navigation; FAQ remains the question hub.
-- Unique metadata, canonical URLs, Open Graph/Twitter cards, Organization JSON-LD, FAQPage and BreadcrumbList where appropriate, robots, sitemap, manifest, and a real 404.
+The hypothetical walkthrough explicitly assumes clear rights, technical readiness, buyer interest, and signed terms. It states that no historical engagement or guaranteed timeline is represented. No customer names, transaction history, claimed buyer relationships, or fabricated statistics were introduced.
 
-The estimator includes source-system quick picks and 19 expandable categories, Other/skip paths, optional per-system history, provenance, early contact capture, four branching models, visible assumptions, mobile concept-by-concept progression, saved answers, Back controls, and referral links. Switching type clears unrelated answers and starts a fresh submission while retaining contact details. Confirmed final delivery clears the stored draft.
+## Supporting pages and files
 
-Other working interactions include the homepage ledger, redaction exhibit, vertical details, partner earnings calculator, referral link/QR/copy/download, read-only referral-stage lookup, granular cookie choices, and motion pause. There are no raw-file uploads.
+`lib/homepage.js` contains the new presentation. `lib/advisory-notes.js` contains shared disclosures. `app.js` retains functional state and event infrastructure while simplifying the estimator, buyer, security, referral, industry, and dashboard presentations. `lib/answers.js` no longer emits Folio labels. `styles.css` provides the new responsive system across all routes. Page theme metadata, favicon, social artwork, and manifest were aligned.
 
-## Webhook and integration contract
+The buyer page uses its own intake CTA. Security explains custody once and includes a working illustrative redaction control. The estimator retains all branches, provisional entry, early contact capture, saved drafts, final confirmation, and copy-summary control. The referral page retains personal links, QR generation, print downloads, status lookup, economics, and attribution explanations. Unconnected private services remain gated and are described accurately. Legal-page source is unchanged.
 
-The supplied URL is set in [config.js](/Users/larry/Documents/ChatGPT/DataQuire/config.js). Browser requests use `/api/lead`; the same-origin relay POSTs the raw flat JSON to Google with `Content-Type: application/json`. There is no action envelope and no opaque `no-cors` success shortcut. Google's `doGet` unknown-action response is unrelated to `doPost`.
+The referral flyer, postcard, and pitch script were updated for color and timing consistency. PDF dimensions, links, QR destinations, and crop marks remain unchanged. Both PDFs were rendered and visually inspected.
 
-Exact external top-level keys:
+## Functional contracts
 
-```text
-form, name, company, email, phone, vertical, volume, labeled, exclusive,
-licensedBefore, valuationLow, valuationHigh, ref, message
-```
+See `docs/FUNCTIONAL-BASELINE.md` and `tests/fixtures/redesign-baseline.json`.
 
-Branch details and the shared submission ID are preserved in `message`. Contact capture uses phase `contact` with zero valuation values; the final request uses phase `valuation`. Success requires a readable affirmative acknowledgment. Failures stay inline and preserve answers. The contact failure path allows continuing with a saved draft.
+- All 25 established routes, plus 404 and `/r/<code>` handling.
+- Exact field names, IDs, input types, required flags, select choices, and checkbox values on all submitted forms.
+- Exact fourteen-key flat payload contract and configured webhook/relay endpoints.
+- All valuation weights, assumptions, branch dependencies, output ranges, and contact/full payload fixtures.
+- Contact capture at the existing step, shared submission ID, confirmed persistence semantics, retry behavior, and no file uploads.
+- First-link attribution for twelve calendar months, 15 percent year-one referral economics, uncapped earnings, renewals, and quarterly payment terms.
+- Brokerage 25–40 percent terms remain in FAQ and terms, with percentages absent from the homepage.
+- Separate consent choices and analytics gating, private asset gating, and read-only referral status behavior.
+- SHA-256 checks verify that seven frozen functional/configuration/server modules are byte-for-byte unchanged. A separate hash confirms the entire original privacy/terms function is unchanged.
 
-The relay coalesces concurrent/repeated acknowledged submissions within one server instance. Durable idempotency and reconciliation of contact/final phases must be implemented in Apps Script or a durable store. Client-side email encoding is referral context, not authentication. First-link device attribution lasts 12 calendar months; financial access and final eligibility need authenticated server records.
+## Verification results
 
-Netlify functions and redirects are included. Deploying only the static `dist` folder without the relay will not support form delivery.
+`npm run verify` passes syntax checks, ESLint, TypeScript, 26 tests, production build, and static validation of all 25 routes plus 404. Checks cover unique SEO/canonical metadata, JSON-LD, main/H1 structure, semantic heading order, complete labels, private assets, forms, internal links and fragments, five-section architecture, illustrative labeling, absence of placeholders/Folio labels/em dashes, and text separation.
 
-## Verification evidence
+Production browser QA used the isolated receiver on port 4174. No fake lead was sent to Apps Script or any live service.
 
-| Check | Result |
-| --- | --- |
-| `npm run verify` | Passed syntax, ESLint, pricing/request type checks, 15 tests, Astro production build, and built-route validation |
-| Production output | 25 content routes plus 404; 20 public sitemap entries |
-| HTTP checks | All 25 routes returned 200; unknown route 404; invalid lead 400; unsupported lead method 405 |
-| Browser route sweep | All 25 routes rendered one H1 and one main landmark, without horizontal overflow at 1440 px |
-| Responsive sweep | 66 primary/security/legal checks across 375, 390, 768, 1024, 1440, and 1920 px; zero overflow or clipped controls/headings |
-| Accessibility basics | Sequential route headings, native labeled controls, inline role-alert errors, focus styles, Enter/Space operation, and mobile step clearance checked |
-| Bundle/privacy checks | No native alert calls or private partner-template contents in public bundles; legal/scout exclusions and required assets verified |
-| Dependencies | `npm audit --omit=dev`: zero reported vulnerabilities |
-| Lighthouse / full WCAG audit | Not measured/certified; no numerical scores or certification claimed |
+- All 25 routes were rendered at 375, 768, and 1440 pixels: 75 route/viewport checks, all with one H1, one main, and no horizontal overflow.
+- Full screenshots of nine major routes at each size were saved in `output/qa/rebuild/`; key pages and the linked print assets were visually reviewed.
+- The catalog and definition rows collapse into native disclosures at 375 and 768 pixels. Vertical rows remain keyboard-operable accordions.
+- The three-step records path, required-answer validation, early contact capture, result, and final request were exercised. The result remained $243K–$972K for the frozen representative semiconductor case.
+- Buyers, Partners, Contact, Session, Refer, and Ledger each reached confirmed success through the local mock receiver. Six representative records/dataset/RL/video fixtures are additionally covered by automated contract tests.
+- The mobile menu, buyer navigation, redaction control, walkthrough, legal drawer, consent rejection, and motion pause/resume were exercised.
+- Programmatically focused quiz H2 targets retain `tabindex="-1"`, with computed outline style `none` and width `0px`. Controls retain a visible keyboard focus rule.
+- No browser console errors were observed in the final route review.
 
-Browser branch checks used an isolated local receiver in `tests/browser-server.mjs`, never the live Apps Script endpoint. These receipts verify the UI state machine, not live persistence.
+Responsive line-break corruption was traced to hidden `<br>` elements joining words. The shared HTML rendering boundary now preserves semantic whitespace after line breaks, and the hero uses natural wrapping. Regression checks cover headings, punctuation concatenation, inline emphasis boundaries, and repeated whitespace.
 
-| Branch | Observed result |
-| --- | --- |
-| Records | Systems > Contact > Details > Result; optional video inserted Step 5 of 6 and removed cleanly back to Result Step 5 of 5; Accounting example $45K-$180K |
-| Dataset | Dataset > Contact > six-field Details > Result; no repeated volume/structure or video field; $81K-$324K |
-| RL environment | Environment > Contact > Result; factors visible; $337.5K-$1.35M |
-| Video | Video > Contact > Result; increasing hours moved $13.5K-$54K to $540K-$2.16M |
-| Mobile video | Five individual concepts > Contact > Result; $36K-$144K; Step 4 of 4 clears the sticky navigation |
+Machine-readable route, form, and focus evidence is in `output/qa/rebuild/`.
 
-Also verified invalid email blocking, reload persistence, acknowledged contact advance, final receipt, repeat-submit disabling, and fresh submission after switching a completed branch. A simulated 502 in the isolated receiver produced the correct inline contact error; the saved-draft fallback advanced correctly and fit at 375 px. Co-branding updated both the one-pager header and prepared-for line; the standalone one-pager has no app navigation/footer, and print CSS hides its controls. Session validation and confirmation, the $60K to $375K earnings calculation, personal QR rendering, and referral clipboard content passed. Template copy cannot be exercised through authenticated UI until that service exists; ten complete authored templates/talk tracks remain private rather than publicly unlocked.
+## Limits
 
-Two earlier authorized terminal integration tests reached the live webhook: one Contact request and one final Video Estimator request. Both used synthetic QA names, `qa@example.com`, and TEST ONLY/not-a-prospect markers. Both returned HTTP 200 with `{"ok":true}`. No real customer lead or payout is claimed. A read-only status lookup also returned a valid empty result.
-
-Sites local-preview guidance informed browser and responsive verification. PDF skill guidance informed generation, page rendering, and visual inspection of the Letter flyer and the 6-by-4-inch postcard with 0.125-inch bleed/crop marks. Both rendered as one-page PDFs without clipping or overlap. The social image was visually reviewed as well.
-
-Screenshots: [desktop](/Users/larry/Documents/ChatGPT/DataQuire/output/qa/home-desktop.jpg), [mobile](/Users/larry/Documents/ChatGPT/DataQuire/output/qa/home-mobile.jpg). QA servers are stopped at handoff. Run `npm run preview` to reopen the production output on port 4173.
-
-## Definition-of-done audit and remaining launch items
-
-The local implementation checks pass. The complete launch checklist is **not all green**:
-
-- Pages, route metadata, coherent visual anchors, consistent estimator CTA destinations, all four estimator flows, save behavior, native form validation, honest receipts, and no-alert/private-asset checks pass.
-- Intended processing, payout timelines, and valuation math remain explicitly conditional or illustrative. No fabricated testimonials, client logos, or DataQuire deal history ship.
-- Five supplied market reports remain marked PLACEHOLDER until evidence is available. The airline entry links to the [Axios auction report](https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy) and distinguishes the reported winning bid from approval and privacy review.
-- GTM container/vendor configuration is missing. Meta and LinkedIn tags are not loaded. Configure and test vendor-level consent before claiming retargeting works.
-- Approved-partner passwordless identity, authenticated template/dashboard services, named-account registration, financial/document access, cross-device attribution, and durable payout records still require real backend integration. No client-side unlock bypass is provided.
-- A private Telegram invite URL is missing. The scout CTA reports this rather than linking to an invented channel.
-- Privacy, Terms, partner economics/eligibility, buyer NDAs, specialist processing, security arrangements, and retention/deletion schedules require attorney and operational approval.
-- Lighthouse targets and a complete WCAG 2.1 AA audit remain open. The browser/basic accessibility checks above are not substitutes for those measurements.
-
-The source is ready for review and further integration work. It is not represented as a deployed or unconditionally production-ready service.
+Actual payout timing, buyer demand, transaction outcomes, and availability of specialists are not verified and are not represented as facts. The 30-day path is hypothetical. Legal policies still require attorney review. Authentication, private-channel access, and financial dashboards still depend on unconfigured services. Live webhook delivery was intentionally not tested; integration code and endpoint configuration are preserved, while browser submissions used mocks. Native OS reduced-motion emulation was unavailable in the browser interface; the media query was checked in source and the equivalent pause control was tested in the rendered product. Existing Netlify publication is driven by the requested Git push; a successful push alone does not confirm completion of a Netlify deployment.

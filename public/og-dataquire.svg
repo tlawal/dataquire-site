@@ -1,11 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
-  <rect width="1200" height="630" fill="#070C0A"/>
-  <g transform="translate(726 24) scale(7.5)" opacity=".4">
-    <path d="M13 22 29 15v34l-16 7V22Zm8-8 16-7v34l-8 4V15l-8 4v-5Zm16-7 14 7v34l-14-7V7Z" stroke="#214FDB" stroke-width="1.5"/>
-    <path d="m17 27 8-3m-8 10 8-3m16-14 6 3m-6 6 6 3" stroke="#6E97F2"/>
-  </g>
-  <text x="96" y="260" fill="#fff" font-family="Georgia, serif" font-size="102" font-weight="bold">DataQuire</text>
-  <text x="102" y="330" fill="#DDE3EA" font-family="Arial, sans-serif" font-size="31" letter-spacing="4">THE AI DATA BROKERAGE</text>
-  <path d="M102 385h290" stroke="#214FDB" stroke-width="5"/>
-  <text x="102" y="444" fill="#6E97F2" font-family="Georgia, serif" font-size="45" font-style="italic">Gathered knowledge. Defined terms.</text>
+<rect width="1200" height="630" fill="#e9f0ec"/>
+<g transform="translate(840 110) scale(4.5)"><path d="M13 22 29 15v34l-16 7V22Zm8-8 16-7v34l-8 4V15l-8 4v-5Zm16-7 14 7v34l-14-7V7Z" fill="#d8e7e7" stroke="#153b43" stroke-width=".5"/><path d="m37 7 14 7v34l-14-7V7Z" fill="#bd5238" stroke="#153b43" stroke-width=".5"/></g>
+<text x="80" y="100" fill="#153b43" font-family="Arial,sans-serif" font-size="28" font-weight="bold">DataQuire</text>
+<text x="80" y="255" fill="#153b43" font-family="Arial,sans-serif" font-size="69" letter-spacing="-3">License the knowledge</text>
+<text x="80" y="335" fill="#153b43" font-family="Arial,sans-serif" font-size="69" letter-spacing="-3">inside your business.</text>
+<path d="M80 392h690" stroke="#ccd7d3"/>
+<text x="80" y="455" fill="#53676a" font-family="Arial,sans-serif" font-size="24">Specialist sell-side advisory for operational data.</text>
+<text x="80" y="540" fill="#94341f" font-family="Arial,sans-serif" font-size="21">Gathered knowledge. Defined terms.</text>
 </svg>

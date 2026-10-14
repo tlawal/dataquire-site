@@ -1,0 +1,702 @@
+[
+  {
+    "route": "/",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "DataQuire | Specialist advisory for operational data",
+    "width": 375
+  },
+  {
+    "route": "/estimator",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Data Valuation Estimator | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/buyers",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "For Buyers | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/refer",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Refer and Earn | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/verticals",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "What We Buy | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/partners",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Partner Program | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/faq",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "FAQ | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/contact",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Contact | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/security",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Security | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/privacy",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Privacy | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/terms",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Terms | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/answers",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "The Reading Room | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/one-pager",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Partner One-Pager | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/templates",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Partner Templates | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/session",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Valuation Session | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/dashboard",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Partner Dashboard | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/scout",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "DataQuire Scouts",
+    "width": 375
+  },
+  {
+    "route": "/answers/company-data-value",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "How much is my company’s data worth? | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/answers/sell-company-data",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "How to sell company data to AI labs. | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/answers/data-licensing-deal",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "How does a data licensing deal work? | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/answers/licensing-vs-selling",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Licensing vs selling company data. | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/answers/is-data-licensing-legal",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Is licensing company data legal? | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/answers/who-buys-company-data",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "Who buys company data? | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/answers/data-source-guides",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "A guide to operational data sources. | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/answers/exclusivity",
+    "viewport": 375,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 375,
+    "title": "How exclusivity works. | DataQuire",
+    "width": 375
+  },
+  {
+    "route": "/",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/estimator",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/buyers",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/refer",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/verticals",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/partners",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/faq",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/contact",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/security",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/privacy",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/terms",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/answers",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/one-pager",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/templates",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/session",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/dashboard",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/scout",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/answers/company-data-value",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/answers/sell-company-data",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/answers/data-licensing-deal",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/answers/licensing-vs-selling",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/answers/is-data-licensing-legal",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/answers/who-buys-company-data",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/answers/data-source-guides",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/answers/exclusivity",
+    "viewport": 768,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/estimator",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/buyers",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/refer",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/verticals",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/partners",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/faq",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/contact",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/security",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/privacy",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/terms",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/answers",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/one-pager",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/templates",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/session",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/dashboard",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/scout",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/answers/company-data-value",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/answers/sell-company-data",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/answers/data-licensing-deal",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/answers/licensing-vs-selling",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/answers/is-data-licensing-legal",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/answers/who-buys-company-data",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/answers/data-source-guides",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/answers/exclusivity",
+    "viewport": 1440,
+    "h1": 1,
+    "main": 1,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  }
+]

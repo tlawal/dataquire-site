@@ -145,8 +145,9 @@ test("all route heading levels are sequential and all FAQs are in the requested 
   assert.equal(faqs[5][0],"Can customer information be exposed?");
   assert.equal(faqs[19][0],"What are RL tasks?");
 });
-test("unverified reporting is explicit, take rate is absent at home, protected assets are gated", () => {
-  assert.ok(routeContent("/").includes("PLACEHOLDER: source verification pending"));
+test("unverified reporting is absent, take rate stays off home, protected assets are gated", () => {
+  assert.ok(!routeContent("/").includes("PLACEHOLDER"));
+  assert.ok(routeContent("/").includes("Contribute to the ledger"));
   assert.ok(!routeContent("/").includes("25 to 40 percent"));
   assert.ok(routeContent("/templates").includes("Partners only"));
   assert.ok(!routeContent("/templates").includes('class="template"'));

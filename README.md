@@ -43,7 +43,7 @@ The estimator captures contact at the WHO step, then sends a full valuation on t
 
 The Netlify configuration builds dist/ and deploys the relay in netlify/functions/lead.mjs. Do not deploy only dist/ to a host without an equivalent /api/lead route: delivery requires that route.
 
-The site has not been published by this task. Canonical URLs use https://dataquire.si. Referral paths /r/<code> resolve to the estimator and preserve the first valid link for 12 calendar months on that device.
+The existing Netlify build and functions remain the deployment path. Canonical URLs use https://dataquire.si. Referral paths /r/<code> resolve to the estimator and preserve the first valid link for 12 calendar months on that device.
 
 ## Intentionally unconfigured services
 
@@ -67,6 +67,6 @@ To regenerate the original Open Graph raster:
 
 ## Data and verification
 
-Estimator answers are stored on the visitor's device for resume and can be cleared. Confirmed final delivery removes the stored draft. Legal and scout routes are unlisted. All prices use an illustrative prototype. The market ledger marks unverified sources as PLACEHOLDER and never represents DataQuire transactions.
+Estimator answers are stored on the visitor's device for resume and can be cleared. Confirmed final delivery removes the stored draft. Legal and scout routes are unlisted. All prices use an illustrative prototype. The homepage has five sections. The ledger uses an intentional contribution state rather than unverified market entries. The 30-day engagement walkthrough is explicitly hypothetical. Shared qualifications live in an Advisory & Legal Notes drawer.
 
-See BUILD-REPORT.md for the creative brief, acceptance evidence, and remaining launch items.
+See BUILD-REPORT.md for the rebuild, acceptance evidence, preserved contracts, and service limitations.

@@ -1,0 +1,1699 @@
+{
+  "capturedAt": "2026-10-14",
+  "verified": "npm run verify completed successfully before redesign: 15 tests, 25 routes plus 404.",
+  "frozenSha256": {
+    "lib/model.js": "b87f7b464c4559d872e57e8a12c36d60388d2fbebe0f5cdaa33ba2b6276bfc5a",
+    "lib/submission.js": "caa8d9be4c5fa133550f6a6a556eb3c6cafd894caedb8827f4124745070d370b",
+    "lib/webhook-proxy.js": "fd225ce24100067020fa358972d811b0e6bbf3b9ee44590056fd1deee4d92545",
+    "config.js": "6ce688f1462a38a6743340d7c5ca5d7f034de5f77f4b919313c4074c0f729852",
+    "types/contracts.d.ts": "11dd9cca930a3bf03b099b98a961aa16da3e90dd4750eb1c51faa246cb075c80",
+    "netlify/functions/lead.mjs": "7e0465da2bdc007ce877635d2ce587e9557a40c8cc14f8428aee80807bbada77",
+    "netlify/functions/referral-status.mjs": "b0b79799f86b2ffdb80a1fb6cf72ef6ec712ab614b996c6ec0120488f454f6c6"
+  },
+  "routes": [
+    "/",
+    "/estimator",
+    "/buyers",
+    "/refer",
+    "/verticals",
+    "/partners",
+    "/faq",
+    "/contact",
+    "/security",
+    "/privacy",
+    "/terms",
+    "/answers",
+    "/one-pager",
+    "/templates",
+    "/session",
+    "/dashboard",
+    "/scout",
+    "/answers/company-data-value",
+    "/answers/sell-company-data",
+    "/answers/data-licensing-deal",
+    "/answers/licensing-vs-selling",
+    "/answers/is-data-licensing-legal",
+    "/answers/who-buys-company-data",
+    "/answers/data-source-guides",
+    "/answers/exclusivity"
+  ],
+  "defaultEstimator": {
+    "step": 0,
+    "type": "",
+    "systems": [],
+    "showSystems": false,
+    "name": "",
+    "company": "",
+    "email": "",
+    "phone": "",
+    "vertical": "",
+    "volume": "",
+    "structured": "",
+    "exclusive": "",
+    "licensedBefore": "",
+    "companySize": "",
+    "years": "",
+    "coreSystem": "",
+    "coreYears": "",
+    "exportReadiness": "",
+    "provenance": "",
+    "hasVideo": "",
+    "format": "",
+    "updated": "",
+    "domain": "",
+    "taskCount": "",
+    "graders": "",
+    "headless": "",
+    "owned": "",
+    "capture": "",
+    "hours": "",
+    "angles": "",
+    "releases": "",
+    "futureCapture": "",
+    "submitted": false,
+    "question": 0,
+    "submissionId": "",
+    "draftDelivered": false,
+    "otherSystems": "",
+    "systemHistory": {}
+  },
+  "forms": [
+    {
+      "route": "/",
+      "form": "Ledger",
+      "fields": [
+        {
+          "id": "ledger-email",
+          "name": "email",
+          "tag": "input",
+          "type": "email",
+          "required": true
+        }
+      ]
+    },
+    {
+      "route": "/buyers",
+      "form": "Buyers",
+      "fields": [
+        {
+          "id": "",
+          "name": "dataTypes",
+          "tag": "input",
+          "type": "checkbox",
+          "required": false,
+          "value": "semiconductor process data"
+        },
+        {
+          "id": "",
+          "name": "dataTypes",
+          "tag": "input",
+          "type": "checkbox",
+          "required": false,
+          "value": "aerospace telemetry"
+        },
+        {
+          "id": "",
+          "name": "dataTypes",
+          "tag": "input",
+          "type": "checkbox",
+          "required": false,
+          "value": "legal corpora"
+        },
+        {
+          "id": "",
+          "name": "dataTypes",
+          "tag": "input",
+          "type": "checkbox",
+          "required": false,
+          "value": "lab data"
+        },
+        {
+          "id": "",
+          "name": "dataTypes",
+          "tag": "input",
+          "type": "checkbox",
+          "required": false,
+          "value": "accounting records"
+        },
+        {
+          "id": "",
+          "name": "dataTypes",
+          "tag": "input",
+          "type": "checkbox",
+          "required": false,
+          "value": "video"
+        },
+        {
+          "id": "",
+          "name": "dataTypes",
+          "tag": "input",
+          "type": "checkbox",
+          "required": false,
+          "value": "healthcare"
+        },
+        {
+          "id": "",
+          "name": "dataTypes",
+          "tag": "input",
+          "type": "checkbox",
+          "required": false,
+          "value": "other"
+        },
+        {
+          "id": "buyer-industries",
+          "name": "industries",
+          "tag": "input",
+          "type": "",
+          "required": true
+        },
+        {
+          "id": "buyer-timeline",
+          "name": "timeline",
+          "tag": "select",
+          "type": "",
+          "required": true,
+          "options": [
+            "",
+            "ASAP",
+            "This quarter",
+            "Exploring"
+          ]
+        },
+        {
+          "id": "buyer-budget",
+          "name": "budgetRange",
+          "tag": "input",
+          "type": "",
+          "required": false
+        },
+        {
+          "id": "buyer-name",
+          "name": "name",
+          "tag": "input",
+          "type": "",
+          "required": true
+        },
+        {
+          "id": "buyer-email",
+          "name": "email",
+          "tag": "input",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "buyer-org",
+          "name": "organization",
+          "tag": "input",
+          "type": "",
+          "required": true
+        }
+      ]
+    },
+    {
+      "route": "/refer",
+      "form": "Refer",
+      "fields": [
+        {
+          "id": "refer-name",
+          "name": "name",
+          "tag": "input",
+          "type": "",
+          "required": true
+        },
+        {
+          "id": "refer-email",
+          "name": "email",
+          "tag": "input",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "refer-company",
+          "name": "company",
+          "tag": "input",
+          "type": "",
+          "required": true
+        },
+        {
+          "id": "refer-owner",
+          "name": "ownerContact",
+          "tag": "input",
+          "type": "",
+          "required": false
+        }
+      ]
+    },
+    {
+      "route": "/partners",
+      "form": "Partners",
+      "fields": [
+        {
+          "id": "partner-name",
+          "name": "name",
+          "tag": "input",
+          "type": "",
+          "required": true
+        },
+        {
+          "id": "partner-company",
+          "name": "company",
+          "tag": "input",
+          "type": "",
+          "required": true
+        },
+        {
+          "id": "partner-email",
+          "name": "email",
+          "tag": "input",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "partner-intros",
+          "name": "potentialIntroductions",
+          "tag": "select",
+          "type": "",
+          "required": true,
+          "options": [
+            "",
+            "1-5",
+            "5-20",
+            "20+"
+          ]
+        },
+        {
+          "id": "partner-industries",
+          "name": "industries",
+          "tag": "input",
+          "type": "",
+          "required": true
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "form": "Contact",
+      "fields": [
+        {
+          "id": "contact-name",
+          "name": "name",
+          "tag": "input",
+          "type": "",
+          "required": true
+        },
+        {
+          "id": "contact-company",
+          "name": "company",
+          "tag": "input",
+          "type": "",
+          "required": true
+        },
+        {
+          "id": "contact-email",
+          "name": "email",
+          "tag": "input",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "contact-vertical",
+          "name": "vertical",
+          "tag": "select",
+          "type": "",
+          "required": true,
+          "options": [
+            "",
+            "Semiconductors",
+            "Aerospace",
+            "Legal",
+            "Science labs",
+            "Accounting",
+            "Video and media",
+            "Healthcare",
+            "Insurance claims",
+            "Construction and architecture",
+            "Other"
+          ]
+        },
+        {
+          "id": "contact-message",
+          "name": "message",
+          "tag": "textarea",
+          "type": "",
+          "required": true
+        }
+      ]
+    },
+    {
+      "route": "/session",
+      "form": "Session",
+      "fields": [
+        {
+          "id": "session-name",
+          "name": "name",
+          "tag": "input",
+          "type": "",
+          "required": true
+        },
+        {
+          "id": "session-email",
+          "name": "email",
+          "tag": "input",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "session-company",
+          "name": "company",
+          "tag": "input",
+          "type": "",
+          "required": true
+        },
+        {
+          "id": "session-time",
+          "name": "preferredTime",
+          "tag": "select",
+          "type": "",
+          "required": true,
+          "options": [
+            "",
+            "Morning",
+            "Afternoon",
+            "Either"
+          ]
+        }
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "type": "records",
+      "step": "Type",
+      "missing": []
+    },
+    {
+      "type": "records",
+      "step": "Systems",
+      "missing": [
+        "systems"
+      ]
+    },
+    {
+      "type": "records",
+      "step": "Contact",
+      "missing": [
+        "name",
+        "company",
+        "email"
+      ]
+    },
+    {
+      "type": "records",
+      "step": "Details",
+      "missing": [
+        "vertical",
+        "volume",
+        "structured",
+        "exclusive",
+        "licensedBefore",
+        "companySize",
+        "years",
+        "hasVideo",
+        "provenance"
+      ]
+    },
+    {
+      "type": "records",
+      "step": "Result",
+      "missing": []
+    },
+    {
+      "type": "dataset",
+      "step": "Type",
+      "missing": []
+    },
+    {
+      "type": "dataset",
+      "step": "Dataset",
+      "missing": [
+        "format",
+        "volume",
+        "structured",
+        "updated"
+      ]
+    },
+    {
+      "type": "dataset",
+      "step": "Contact",
+      "missing": [
+        "name",
+        "company",
+        "email"
+      ]
+    },
+    {
+      "type": "dataset",
+      "step": "Details",
+      "missing": [
+        "vertical",
+        "exclusive",
+        "licensedBefore",
+        "companySize",
+        "years",
+        "provenance"
+      ]
+    },
+    {
+      "type": "dataset",
+      "step": "Result",
+      "missing": []
+    },
+    {
+      "type": "rl",
+      "step": "Type",
+      "missing": []
+    },
+    {
+      "type": "rl",
+      "step": "Environment",
+      "missing": [
+        "domain",
+        "taskCount",
+        "graders",
+        "headless",
+        "owned"
+      ]
+    },
+    {
+      "type": "rl",
+      "step": "Contact",
+      "missing": [
+        "name",
+        "company",
+        "email"
+      ]
+    },
+    {
+      "type": "rl",
+      "step": "Result",
+      "missing": []
+    },
+    {
+      "type": "video",
+      "step": "Type",
+      "missing": []
+    },
+    {
+      "type": "video",
+      "step": "Video",
+      "missing": [
+        "capture",
+        "hours",
+        "angles",
+        "releases",
+        "futureCapture"
+      ]
+    },
+    {
+      "type": "video",
+      "step": "Contact",
+      "missing": [
+        "name",
+        "company",
+        "email"
+      ]
+    },
+    {
+      "type": "video",
+      "step": "Result",
+      "missing": []
+    }
+  ],
+  "attribution": {
+    "code": "aW50cm9kdWNlckBleGFtcGxlLmNvbQ",
+    "email": "introducer@example.com",
+    "firstSeenAt": "2026-10-14T12:00:00.000Z",
+    "expiresAt": "2027-10-14T12:00:00.000Z",
+    "mechanism": "first-link",
+    "verified": false
+  },
+  "fixtures": [
+    {
+      "name": "company-records",
+      "state": {
+        "step": 0,
+        "type": "records",
+        "systems": [
+          "QuickBooks",
+          "Slack"
+        ],
+        "showSystems": false,
+        "name": " QA Owner ",
+        "company": " QA Company ",
+        "email": " qa@example.com ",
+        "phone": " +1 555 010 1234 ",
+        "vertical": "Semiconductors",
+        "volume": "10k to 1M",
+        "structured": "yes",
+        "exclusive": "yes",
+        "licensedBefore": "no",
+        "companySize": "30-199",
+        "years": "3+",
+        "coreSystem": "QuickBooks",
+        "coreYears": "8",
+        "exportReadiness": "This quarter",
+        "provenance": "Owned operational records; no scraped data.",
+        "hasVideo": "no",
+        "format": "",
+        "updated": "",
+        "domain": "",
+        "taskCount": "",
+        "graders": "",
+        "headless": "",
+        "owned": "",
+        "capture": "",
+        "hours": "",
+        "angles": "",
+        "releases": "",
+        "futureCapture": "",
+        "submitted": false,
+        "question": 0,
+        "submissionId": "",
+        "draftDelivered": false,
+        "otherSystems": "Custom MES",
+        "systemHistory": {
+          "QuickBooks": 8,
+          "Slack": 4
+        }
+      },
+      "estimate": {
+        "midpoint": 486000,
+        "low": 243000,
+        "high": 972000,
+        "factors": [
+          [
+            "Vertical base",
+            180000,
+            "money"
+          ],
+          [
+            "Volume",
+            1
+          ],
+          [
+            "Structure",
+            1.5
+          ],
+          [
+            "Exclusive license",
+            1.8
+          ],
+          [
+            "Previously licensed",
+            1
+          ]
+        ]
+      },
+      "flow": [
+        "Type",
+        "Systems",
+        "Contact",
+        "Details",
+        "Result"
+      ],
+      "payload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "Semiconductors",
+        "volume": "10k to 1M",
+        "labeled": "yes",
+        "exclusive": "yes",
+        "licensedBefore": "no",
+        "valuationLow": 243000,
+        "valuationHigh": 972000,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "valuation",
+          "submitType": "records",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [
+            "QuickBooks",
+            "Slack"
+          ],
+          "otherSystems": "Custom MES",
+          "details": {
+            "vertical": "Semiconductors",
+            "volume": "10k to 1M",
+            "labeled": "yes",
+            "exclusive": "yes",
+            "licensedBefore": "no",
+            "companySize": "30-199",
+            "yearsOnSystems": "3+",
+            "coreSystem": "QuickBooks",
+            "coreYears": "8",
+            "systemHistory": {
+              "QuickBooks": 8,
+              "Slack": 4
+            },
+            "exportReadiness": "This quarter",
+            "provenance": "Owned operational records; no scraped data.",
+            "video": "no"
+          },
+          "dataset": {},
+          "env": {},
+          "video": {},
+          "indicativeRange": {
+            "low": 243000,
+            "high": 972000,
+            "currency": "USD",
+            "model": "illustrative-v1",
+            "factors": [
+              [
+                "Vertical base",
+                180000,
+                "money"
+              ],
+              [
+                "Volume",
+                1
+              ],
+              [
+                "Structure",
+                1.5
+              ],
+              [
+                "Exclusive license",
+                1.8
+              ],
+              [
+                "Previously licensed",
+                1
+              ]
+            ]
+          },
+          "submissionId": "baseline-0"
+        }
+      },
+      "contactPayload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "Semiconductors",
+        "volume": "10k to 1M",
+        "labeled": "yes",
+        "exclusive": "yes",
+        "licensedBefore": "no",
+        "valuationLow": 0,
+        "valuationHigh": 0,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "contact",
+          "submitType": "records",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [
+            "QuickBooks",
+            "Slack"
+          ],
+          "otherSystems": "Custom MES",
+          "details": {
+            "vertical": "Semiconductors",
+            "volume": "10k to 1M",
+            "labeled": "yes",
+            "exclusive": "yes",
+            "licensedBefore": "no",
+            "companySize": "30-199",
+            "yearsOnSystems": "3+",
+            "coreSystem": "QuickBooks",
+            "coreYears": "8",
+            "systemHistory": {
+              "QuickBooks": 8,
+              "Slack": 4
+            },
+            "exportReadiness": "This quarter",
+            "provenance": "Owned operational records; no scraped data.",
+            "video": "no"
+          },
+          "dataset": {},
+          "env": {},
+          "video": {},
+          "indicativeRange": null,
+          "submissionId": "baseline-0"
+        }
+      }
+    },
+    {
+      "name": "records-with-video",
+      "state": {
+        "step": 0,
+        "type": "records",
+        "systems": [
+          "Video archive"
+        ],
+        "showSystems": false,
+        "name": " QA Owner ",
+        "company": " QA Company ",
+        "email": " qa@example.com ",
+        "phone": " +1 555 010 1234 ",
+        "vertical": "Construction and architecture",
+        "volume": "1M to 100M",
+        "structured": "raw",
+        "exclusive": "no",
+        "licensedBefore": "yes",
+        "companySize": "200-999",
+        "years": "3+",
+        "coreSystem": "",
+        "coreYears": "",
+        "exportReadiness": "",
+        "provenance": "Owned project archive.",
+        "hasVideo": "yes",
+        "format": "",
+        "updated": "",
+        "domain": "",
+        "taskCount": "",
+        "graders": "",
+        "headless": "",
+        "owned": "",
+        "capture": "existing archive",
+        "hours": "100-1,000",
+        "angles": "multi-angle",
+        "releases": "partial",
+        "futureCapture": "maybe",
+        "submitted": false,
+        "question": 0,
+        "submissionId": "",
+        "draftDelivered": false,
+        "otherSystems": "",
+        "systemHistory": {}
+      },
+      "estimate": {
+        "midpoint": 480000,
+        "low": 240000,
+        "high": 960000,
+        "factors": [
+          [
+            "Vertical base",
+            100000,
+            "money"
+          ],
+          [
+            "Volume",
+            8
+          ],
+          [
+            "Structure",
+            1
+          ],
+          [
+            "Exclusive license",
+            1
+          ],
+          [
+            "Previously licensed",
+            0.6
+          ]
+        ]
+      },
+      "flow": [
+        "Type",
+        "Systems",
+        "Contact",
+        "Details",
+        "Video",
+        "Result"
+      ],
+      "payload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "Construction and architecture",
+        "volume": "1M to 100M",
+        "labeled": "raw",
+        "exclusive": "no",
+        "licensedBefore": "yes",
+        "valuationLow": 240000,
+        "valuationHigh": 960000,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "valuation",
+          "submitType": "records",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [
+            "Video archive"
+          ],
+          "otherSystems": "",
+          "details": {
+            "vertical": "Construction and architecture",
+            "volume": "1M to 100M",
+            "labeled": "raw",
+            "exclusive": "no",
+            "licensedBefore": "yes",
+            "companySize": "200-999",
+            "yearsOnSystems": "3+",
+            "coreSystem": "",
+            "coreYears": "",
+            "systemHistory": {},
+            "exportReadiness": "",
+            "provenance": "Owned project archive.",
+            "video": "yes"
+          },
+          "dataset": {},
+          "env": {},
+          "video": {
+            "captureMethod": "existing archive",
+            "hours": "100-1,000",
+            "angle": "multi-angle",
+            "releases": "partial",
+            "equip": "maybe"
+          },
+          "indicativeRange": {
+            "low": 240000,
+            "high": 960000,
+            "currency": "USD",
+            "model": "illustrative-v1",
+            "factors": [
+              [
+                "Vertical base",
+                100000,
+                "money"
+              ],
+              [
+                "Volume",
+                8
+              ],
+              [
+                "Structure",
+                1
+              ],
+              [
+                "Exclusive license",
+                1
+              ],
+              [
+                "Previously licensed",
+                0.6
+              ]
+            ]
+          },
+          "submissionId": "baseline-1"
+        }
+      },
+      "contactPayload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "Construction and architecture",
+        "volume": "1M to 100M",
+        "labeled": "raw",
+        "exclusive": "no",
+        "licensedBefore": "yes",
+        "valuationLow": 0,
+        "valuationHigh": 0,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "contact",
+          "submitType": "records",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [
+            "Video archive"
+          ],
+          "otherSystems": "",
+          "details": {
+            "vertical": "Construction and architecture",
+            "volume": "1M to 100M",
+            "labeled": "raw",
+            "exclusive": "no",
+            "licensedBefore": "yes",
+            "companySize": "200-999",
+            "yearsOnSystems": "3+",
+            "coreSystem": "",
+            "coreYears": "",
+            "systemHistory": {},
+            "exportReadiness": "",
+            "provenance": "Owned project archive.",
+            "video": "yes"
+          },
+          "dataset": {},
+          "env": {},
+          "video": {
+            "captureMethod": "existing archive",
+            "hours": "100-1,000",
+            "angle": "multi-angle",
+            "releases": "partial",
+            "equip": "maybe"
+          },
+          "indicativeRange": null,
+          "submissionId": "baseline-1"
+        }
+      }
+    },
+    {
+      "name": "dataset",
+      "state": {
+        "step": 0,
+        "type": "dataset",
+        "systems": [],
+        "showSystems": false,
+        "name": " QA Owner ",
+        "company": " QA Company ",
+        "email": " qa@example.com ",
+        "phone": " +1 555 010 1234 ",
+        "vertical": "Legal",
+        "volume": "10k to 1M",
+        "structured": "partially",
+        "exclusive": "no",
+        "licensedBefore": "no",
+        "companySize": "30-199",
+        "years": "3+",
+        "coreSystem": "",
+        "coreYears": "",
+        "exportReadiness": "",
+        "provenance": "Owned labeled dataset.",
+        "hasVideo": "",
+        "format": "images",
+        "updated": "yes",
+        "domain": "",
+        "taskCount": "",
+        "graders": "",
+        "headless": "",
+        "owned": "",
+        "capture": "",
+        "hours": "",
+        "angles": "",
+        "releases": "",
+        "futureCapture": "",
+        "submitted": false,
+        "question": 0,
+        "submissionId": "",
+        "draftDelivered": false,
+        "otherSystems": "",
+        "systemHistory": {}
+      },
+      "estimate": {
+        "midpoint": 129600,
+        "low": 64800,
+        "high": 259200,
+        "factors": [
+          [
+            "Vertical base",
+            90000,
+            "money"
+          ],
+          [
+            "Volume",
+            1
+          ],
+          [
+            "Structure",
+            1.2
+          ],
+          [
+            "Exclusive license",
+            1
+          ],
+          [
+            "Previously licensed",
+            1
+          ],
+          [
+            "Actively updated",
+            1.2
+          ]
+        ]
+      },
+      "flow": [
+        "Type",
+        "Dataset",
+        "Contact",
+        "Details",
+        "Result"
+      ],
+      "payload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "Legal",
+        "volume": "10k to 1M",
+        "labeled": "partially",
+        "exclusive": "no",
+        "licensedBefore": "no",
+        "valuationLow": 64800,
+        "valuationHigh": 259200,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "valuation",
+          "submitType": "dataset",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [],
+          "otherSystems": "",
+          "details": {
+            "vertical": "Legal",
+            "volume": "",
+            "labeled": "",
+            "exclusive": "no",
+            "licensedBefore": "no",
+            "companySize": "30-199",
+            "yearsOnSystems": "3+",
+            "provenance": "Owned labeled dataset.",
+            "video": ""
+          },
+          "dataset": {
+            "format": "images",
+            "dvolume": "10k to 1M",
+            "dlabeled": "partially",
+            "updated": "yes"
+          },
+          "env": {},
+          "video": {},
+          "indicativeRange": {
+            "low": 64800,
+            "high": 259200,
+            "currency": "USD",
+            "model": "illustrative-v1",
+            "factors": [
+              [
+                "Vertical base",
+                90000,
+                "money"
+              ],
+              [
+                "Volume",
+                1
+              ],
+              [
+                "Structure",
+                1.2
+              ],
+              [
+                "Exclusive license",
+                1
+              ],
+              [
+                "Previously licensed",
+                1
+              ],
+              [
+                "Actively updated",
+                1.2
+              ]
+            ]
+          },
+          "submissionId": "baseline-2"
+        }
+      },
+      "contactPayload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "Legal",
+        "volume": "10k to 1M",
+        "labeled": "partially",
+        "exclusive": "no",
+        "licensedBefore": "no",
+        "valuationLow": 0,
+        "valuationHigh": 0,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "contact",
+          "submitType": "dataset",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [],
+          "otherSystems": "",
+          "details": {
+            "vertical": "Legal",
+            "volume": "",
+            "labeled": "",
+            "exclusive": "no",
+            "licensedBefore": "no",
+            "companySize": "30-199",
+            "yearsOnSystems": "3+",
+            "provenance": "Owned labeled dataset.",
+            "video": ""
+          },
+          "dataset": {
+            "format": "images",
+            "dvolume": "10k to 1M",
+            "dlabeled": "partially",
+            "updated": "yes"
+          },
+          "env": {},
+          "video": {},
+          "indicativeRange": null,
+          "submissionId": "baseline-2"
+        }
+      }
+    },
+    {
+      "name": "rl-environment",
+      "state": {
+        "step": 0,
+        "type": "rl",
+        "systems": [],
+        "showSystems": false,
+        "name": " QA Owner ",
+        "company": " QA Company ",
+        "email": " qa@example.com ",
+        "phone": " +1 555 010 1234 ",
+        "vertical": "",
+        "volume": "",
+        "structured": "",
+        "exclusive": "",
+        "licensedBefore": "",
+        "companySize": "",
+        "years": "",
+        "coreSystem": "",
+        "coreYears": "",
+        "exportReadiness": "",
+        "provenance": "",
+        "hasVideo": "",
+        "format": "",
+        "updated": "",
+        "domain": "science/lab",
+        "taskCount": "500+",
+        "graders": "calibrated graders included",
+        "headless": "yes",
+        "owned": "yes",
+        "capture": "",
+        "hours": "",
+        "angles": "",
+        "releases": "",
+        "futureCapture": "",
+        "submitted": false,
+        "question": 0,
+        "submissionId": "",
+        "draftDelivered": false,
+        "otherSystems": "",
+        "systemHistory": {}
+      },
+      "estimate": {
+        "midpoint": 675000,
+        "low": 337500,
+        "high": 1350000,
+        "factors": [
+          [
+            "Domain base",
+            100000,
+            "money"
+          ],
+          [
+            "Task count",
+            2.5
+          ],
+          [
+            "Graders",
+            1.8
+          ],
+          [
+            "Headless scale",
+            1.5
+          ]
+        ]
+      },
+      "flow": [
+        "Type",
+        "Environment",
+        "Contact",
+        "Result"
+      ],
+      "payload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "",
+        "volume": "",
+        "labeled": "",
+        "exclusive": "",
+        "licensedBefore": "",
+        "valuationLow": 337500,
+        "valuationHigh": 1350000,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "valuation",
+          "submitType": "env",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [],
+          "otherSystems": "",
+          "details": {},
+          "dataset": {},
+          "env": {
+            "domain": "science/lab",
+            "tasks": "500+",
+            "graders": "calibrated graders included",
+            "escale": "yes",
+            "erights": "yes"
+          },
+          "video": {},
+          "indicativeRange": {
+            "low": 337500,
+            "high": 1350000,
+            "currency": "USD",
+            "model": "illustrative-v1",
+            "factors": [
+              [
+                "Domain base",
+                100000,
+                "money"
+              ],
+              [
+                "Task count",
+                2.5
+              ],
+              [
+                "Graders",
+                1.8
+              ],
+              [
+                "Headless scale",
+                1.5
+              ]
+            ]
+          },
+          "submissionId": "baseline-3"
+        }
+      },
+      "contactPayload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "",
+        "volume": "",
+        "labeled": "",
+        "exclusive": "",
+        "licensedBefore": "",
+        "valuationLow": 0,
+        "valuationHigh": 0,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "contact",
+          "submitType": "env",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [],
+          "otherSystems": "",
+          "details": {},
+          "dataset": {},
+          "env": {
+            "domain": "science/lab",
+            "tasks": "500+",
+            "graders": "calibrated graders included",
+            "escale": "yes",
+            "erights": "yes"
+          },
+          "video": {},
+          "indicativeRange": null,
+          "submissionId": "baseline-3"
+        }
+      }
+    },
+    {
+      "name": "video-released",
+      "state": {
+        "step": 0,
+        "type": "video",
+        "systems": [],
+        "showSystems": false,
+        "name": " QA Owner ",
+        "company": " QA Company ",
+        "email": " qa@example.com ",
+        "phone": " +1 555 010 1234 ",
+        "vertical": "",
+        "volume": "",
+        "structured": "",
+        "exclusive": "",
+        "licensedBefore": "",
+        "companySize": "",
+        "years": "",
+        "coreSystem": "",
+        "coreYears": "",
+        "exportReadiness": "",
+        "provenance": "",
+        "hasVideo": "",
+        "format": "",
+        "updated": "",
+        "domain": "",
+        "taskCount": "",
+        "graders": "",
+        "headless": "",
+        "owned": "",
+        "capture": "headcam/wearable",
+        "hours": "10-100",
+        "angles": "multi-angle",
+        "releases": "yes",
+        "futureCapture": "no",
+        "submitted": false,
+        "question": 0,
+        "submissionId": "",
+        "draftDelivered": false,
+        "otherSystems": "",
+        "systemHistory": {}
+      },
+      "estimate": {
+        "midpoint": 108000,
+        "low": 54000,
+        "high": 216000,
+        "factors": [
+          [
+            "Hours base",
+            60000,
+            "money"
+          ],
+          [
+            "Angles",
+            1.5
+          ],
+          [
+            "Signed releases",
+            1.2
+          ]
+        ]
+      },
+      "flow": [
+        "Type",
+        "Video",
+        "Contact",
+        "Result"
+      ],
+      "payload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "",
+        "volume": "",
+        "labeled": "",
+        "exclusive": "",
+        "licensedBefore": "",
+        "valuationLow": 54000,
+        "valuationHigh": 216000,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "valuation",
+          "submitType": "video",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [],
+          "otherSystems": "",
+          "details": {},
+          "dataset": {},
+          "env": {},
+          "video": {
+            "captureMethod": "headcam/wearable",
+            "hours": "10-100",
+            "angle": "multi-angle",
+            "releases": "yes",
+            "equip": "no"
+          },
+          "indicativeRange": {
+            "low": 54000,
+            "high": 216000,
+            "currency": "USD",
+            "model": "illustrative-v1",
+            "factors": [
+              [
+                "Hours base",
+                60000,
+                "money"
+              ],
+              [
+                "Angles",
+                1.5
+              ],
+              [
+                "Signed releases",
+                1.2
+              ]
+            ]
+          },
+          "submissionId": "baseline-4"
+        }
+      },
+      "contactPayload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "",
+        "volume": "",
+        "labeled": "",
+        "exclusive": "",
+        "licensedBefore": "",
+        "valuationLow": 0,
+        "valuationHigh": 0,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "contact",
+          "submitType": "video",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [],
+          "otherSystems": "",
+          "details": {},
+          "dataset": {},
+          "env": {},
+          "video": {
+            "captureMethod": "headcam/wearable",
+            "hours": "10-100",
+            "angle": "multi-angle",
+            "releases": "yes",
+            "equip": "no"
+          },
+          "indicativeRange": null,
+          "submissionId": "baseline-4"
+        }
+      }
+    },
+    {
+      "name": "video-no-release",
+      "state": {
+        "step": 0,
+        "type": "video",
+        "systems": [],
+        "showSystems": false,
+        "name": " QA Owner ",
+        "company": " QA Company ",
+        "email": " qa@example.com ",
+        "phone": " +1 555 010 1234 ",
+        "vertical": "",
+        "volume": "",
+        "structured": "",
+        "exclusive": "",
+        "licensedBefore": "",
+        "companySize": "",
+        "years": "",
+        "coreSystem": "",
+        "coreYears": "",
+        "exportReadiness": "",
+        "provenance": "",
+        "hasVideo": "",
+        "format": "",
+        "updated": "",
+        "domain": "",
+        "taskCount": "",
+        "graders": "",
+        "headless": "",
+        "owned": "",
+        "capture": "fixed cameras",
+        "hours": "under 10",
+        "angles": "single",
+        "releases": "no",
+        "futureCapture": "maybe",
+        "submitted": false,
+        "question": 0,
+        "submissionId": "",
+        "draftDelivered": false,
+        "otherSystems": "",
+        "systemHistory": {}
+      },
+      "estimate": {
+        "midpoint": 10500,
+        "low": 5250,
+        "high": 21000,
+        "factors": [
+          [
+            "Hours base",
+            15000,
+            "money"
+          ],
+          [
+            "Angles",
+            1
+          ],
+          [
+            "Signed releases",
+            0.7
+          ]
+        ]
+      },
+      "flow": [
+        "Type",
+        "Video",
+        "Contact",
+        "Result"
+      ],
+      "payload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "",
+        "volume": "",
+        "labeled": "",
+        "exclusive": "",
+        "licensedBefore": "",
+        "valuationLow": 5250,
+        "valuationHigh": 21000,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "valuation",
+          "submitType": "video",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [],
+          "otherSystems": "",
+          "details": {},
+          "dataset": {},
+          "env": {},
+          "video": {
+            "captureMethod": "fixed cameras",
+            "hours": "under 10",
+            "angle": "single",
+            "releases": "no",
+            "equip": "maybe"
+          },
+          "indicativeRange": {
+            "low": 5250,
+            "high": 21000,
+            "currency": "USD",
+            "model": "illustrative-v1",
+            "factors": [
+              [
+                "Hours base",
+                15000,
+                "money"
+              ],
+              [
+                "Angles",
+                1
+              ],
+              [
+                "Signed releases",
+                0.7
+              ]
+            ]
+          },
+          "submissionId": "baseline-5"
+        }
+      },
+      "contactPayload": {
+        "form": "Estimator",
+        "name": "QA Owner",
+        "company": "QA Company",
+        "email": "qa@example.com",
+        "phone": "+1 555 010 1234",
+        "vertical": "",
+        "volume": "",
+        "labeled": "",
+        "exclusive": "",
+        "licensedBefore": "",
+        "valuationLow": 0,
+        "valuationHigh": 0,
+        "ref": "introducer@example.com",
+        "message": {
+          "phase": "contact",
+          "submitType": "video",
+          "contact": {
+            "name": "QA Owner",
+            "company": "QA Company",
+            "email": "qa@example.com",
+            "phone": "+1 555 010 1234"
+          },
+          "systems": [],
+          "otherSystems": "",
+          "details": {},
+          "dataset": {},
+          "env": {},
+          "video": {
+            "captureMethod": "fixed cameras",
+            "hours": "under 10",
+            "angle": "single",
+            "releases": "no",
+            "equip": "maybe"
+          },
+          "indicativeRange": null,
+          "submissionId": "baseline-5"
+        }
+      }
+    }
+  ],
+  "legalPageSha256": "8626732c0b44fac1f7ce96cc29d81e5589a3c8bbe0a020da62dc50333713c9f7"
+}

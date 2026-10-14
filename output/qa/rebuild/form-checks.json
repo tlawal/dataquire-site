@@ -1,0 +1,32 @@
+[
+  {
+    "form": "Buyers",
+    "status": "true",
+    "confirmation": "Request received.We will reply within one business day."
+  },
+  {
+    "form": "Partners",
+    "status": "true",
+    "confirmation": "Application received. Here is what happens next.01 · ReviewA personal reply in one to two business days.02 · Agreement15 percent, 12-month attribution, and renewals in writing. Register named target accounts at signup; a registered account closing within 12 months credits the partner, with or without a link.03 · MaterialsA referral link, one-pager, and passwordless template access by email.04 · First closeDashboard access after the first referral closes. Payouts quarterly within 30 days of the lab paying us."
+  },
+  {
+    "form": "Contact",
+    "status": "true",
+    "confirmation": "Request received.We will reply within one business day."
+  },
+  {
+    "form": "Session",
+    "status": "true",
+    "confirmation": "Session request received.We will reply to agree a time. A calendar appointment has not yet been booked."
+  },
+  {
+    "form": "Refer",
+    "status": "true",
+    "confirmation": "Request received.We will reply within one business day."
+  },
+  {
+    "form": "Ledger",
+    "status": "true",
+    "confirmation": "Subscription request received.The monthly ledger request has been delivered."
+  }
+]

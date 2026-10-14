@@ -1,7 +1,7 @@
 THE 20-SECOND PITCH
 
-You may have operating records that AI labs will pay to license.
-DataQuire gives you an honest range first, de-identifies data before
+Your operational records may have licensing value for AI training or evaluation.
+DataQuire gives you an indicative prototype range first, de-identifies data before
 any buyer sees it, and nothing moves without your written approval.
 
 THE SEQUENCE
@@ -19,5 +19,5 @@ You may use the DataQuire name when you reach out.
 TERMS
 
 15 percent of year-one revenue. Renewals pay again.
-12-month first-link attribution. Paid within 30 days of the lab paying us.
+12-month first-link attribution. Paid quarterly within 30 days of the lab paying us.
 No-link claims must reach hello@dataquire.si within 7 days.
