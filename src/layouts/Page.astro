@@ -1,0 +1,42 @@
+---
+import {routeContent, routeMeta, seoSchema} from "../../app.js";
+import "../../styles.css";
+
+const {route} = Astro.props;
+const [title, description] = routeMeta[route] || ["Page Not Found | DataQuire", "This page is not in the quire."];
+const canonical = "https://dataquire.si" + (route === "/404" ? "/" : route);
+const unlisted = ["/privacy", "/terms", "/scout", "/templates", "/dashboard", "/404"].includes(route);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070C0A" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {unlisted && <meta name="robots" content="noindex,nofollow" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DataQuire" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://dataquire.si/og-dataquire.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://dataquire.si/og-dataquire.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script id="page-schema" type="application/ld+json" set:html={JSON.stringify(seoSchema(route))} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="app" set:html={routeContent(route)} />
+    <script>
+      import "../../fonts.js";
+      import "../../app.js";
+    </script>
+  </body>
+</html>

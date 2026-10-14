@@ -1,0 +1,13 @@
+---
+import Page from "../layouts/Page.astro";
+import {routeMeta} from "../../app.js";
+
+export function getStaticPaths() {
+  return Object.keys(routeMeta).map(route => ({
+    params: {slug:route === "/" ? undefined : route.slice(1)},
+    props: {route}
+  }));
+}
+const {route} = Astro.props;
+---
+<Page route={route} />

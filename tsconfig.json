@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "strict": false,
+    "skipLibCheck": true
+  },
+  "include": ["lib/model.js","lib/submission.js","config.js","types/contracts.d.ts"]
+}

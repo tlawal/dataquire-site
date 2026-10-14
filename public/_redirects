@@ -1,0 +1,4 @@
+/api/lead /.netlify/functions/lead 200
+/api/referral-status /.netlify/functions/referral-status 200
+/r/* /estimator/index.html 200
+/* /404.html 404

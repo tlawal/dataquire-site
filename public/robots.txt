@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /scout
+
+Sitemap: https://dataquire.si/sitemap.xml
