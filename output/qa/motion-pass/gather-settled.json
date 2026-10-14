@@ -1,0 +1,14 @@
+[
+  {
+    "animation": "gather-front",
+    "transform": "none"
+  },
+  {
+    "animation": "gather-back",
+    "transform": "none"
+  },
+  {
+    "animation": "gather-side",
+    "transform": "none"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "animation": "gather-front",
+    "transform": "matrix(0.99863, -0.052336, 0.052336, 0.99863, -18, 14)"
+  },
+  {
+    "animation": "gather-back",
+    "transform": "matrix(0.999848, -0.0174524, 0.0174524, 0.999848, -3, -16)"
+  },
+  {
+    "animation": "gather-side",
+    "transform": "matrix(0.99863, 0.052336, -0.052336, 0.99863, 16, -8)"
+  }
+]

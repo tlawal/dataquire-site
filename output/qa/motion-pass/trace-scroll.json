@@ -1,0 +1,38 @@
+[
+  {
+    "caption": "A delivery appointment changes. Dispatch needs a route that meets the new window.",
+    "scroll": 0,
+    "stage": "0",
+    "top": 1253.03125
+  },
+  {
+    "caption": "A delivery appointment changes. Dispatch needs a route that meets the new window.",
+    "scroll": 250,
+    "stage": "0",
+    "top": 1003.03125
+  },
+  {
+    "caption": "A delivery appointment changes. Dispatch needs a route that meets the new window.",
+    "scroll": 500,
+    "stage": "0",
+    "top": 753.03125
+  },
+  {
+    "caption": "An incorrect pallet count invalidates the first route. Dispatch checks and corrects the load sheet.",
+    "scroll": 750,
+    "stage": "1",
+    "top": 503.03125
+  },
+  {
+    "caption": "The revised route meets capacity and timing requirements. The result can be checked.",
+    "scroll": 1000,
+    "stage": "2",
+    "top": 253.03125
+  },
+  {
+    "caption": "The revised route meets capacity and timing requirements. The result can be checked.",
+    "scroll": 1250,
+    "stage": "2",
+    "top": 3.03125
+  }
+]

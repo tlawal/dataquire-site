@@ -1,0 +1,98 @@
+[
+  {
+    "route": "/",
+    "h1": "Turn the knowledge inside your business into revenue.",
+    "mainSections": 5,
+    "overflows": [],
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "route": "/",
+    "mode": "de-identified",
+    "pressed": "true",
+    "scrollWidth": 375,
+    "visibleTokens": 3,
+    "width": 375
+  },
+  {
+    "route": "/security",
+    "h1": "Your approval defines the boundary.",
+    "mainSections": 2,
+    "overflows": [],
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "route": "/security",
+    "mode": "de-identified",
+    "pressed": "true",
+    "scrollWidth": 375,
+    "visibleTokens": 3,
+    "width": 375
+  },
+  {
+    "route": "/",
+    "h1": "Turn the knowledge inside your business into revenue.",
+    "mainSections": 5,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/",
+    "mode": "de-identified",
+    "pressed": "true",
+    "scrollWidth": 768,
+    "visibleTokens": 3,
+    "width": 768
+  },
+  {
+    "route": "/security",
+    "h1": "Your approval defines the boundary.",
+    "mainSections": 2,
+    "overflows": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "route": "/security",
+    "mode": "de-identified",
+    "pressed": "true",
+    "scrollWidth": 768,
+    "visibleTokens": 3,
+    "width": 768
+  },
+  {
+    "route": "/",
+    "h1": "Turn the knowledge inside your business into revenue.",
+    "mainSections": 5,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/",
+    "mode": "de-identified",
+    "pressed": "true",
+    "scrollWidth": 1440,
+    "visibleTokens": 3,
+    "width": 1440
+  },
+  {
+    "route": "/security",
+    "h1": "Your approval defines the boundary.",
+    "mainSections": 2,
+    "overflows": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "route": "/security",
+    "mode": "de-identified",
+    "pressed": "true",
+    "scrollWidth": 1440,
+    "visibleTokens": 3,
+    "width": 1440
+  }
+]

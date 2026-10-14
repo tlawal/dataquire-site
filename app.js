@@ -1,3 +1,5 @@
+import {setupWorkingTrace} from "./lib/home-motion.js";
+import {deidentificationRecord} from "./lib/de-identification.js";
 import {homepage} from "./lib/homepage.js";
 import {advisoryNotes} from "./lib/advisory-notes.js";
 import {verticalGlyph} from "./lib/illustrations.js";
@@ -451,7 +453,7 @@ function contact() {
 
 function security() {
   return pageHero("Security & custody", "Your approval defines the boundary.", "Before access, agree what is included, what is excluded, and which uses are permitted.") +
-    '<section class="section"><div class="wrap security-layout"><div><h2>A controlled process.</h2><div class="term-list"><div class="term"><strong>Required approvals</strong><p>A written scope comes before access. Only approved sources may be accessed read-only. Buyers receive redacted samples under NDA and with the owner’s approval.</p></div><div class="term"><strong>Planned safeguards</strong><p>A vetted third-party specialist is contemplated for de-identification. Encryption in transit and at rest is the target. An approximately one-week raw-file hold followed by deletion is intended. Provider, access, retention, and deletion arrangements must be agreed and technically ready before work begins.</p></div><div class="term"><strong>Contractual controls</strong><p>Off-limits lists are binding. The owner retains the underlying data. Use, duration, retention, payment, and any exclusivity are defined in writing. Exclusivity is never perpetual.</p></div><div class="term"><strong>Remaining risks</strong><p>De-identification reduces risk but cannot eliminate re-identification or confidentiality risk. Rights review may prevent a record from being licensed.</p></div></div></div><div class="redaction-exhibit" data-redaction><span class="exhibit-label">Illustrative record, not client data</span><h2>Keep the work.<br>Review the identifiers.</h2><div class="toggle" aria-label="Redaction control"><button type="button" class="active" data-action="redaction-raw" aria-pressed="true">Original</button><button type="button" data-action="redaction-on" aria-pressed="false">De-identify</button></div><div class="ticket"><div class="ticket-head">Illustrative dispatch note</div><p><span class="pii">A named dispatcher</span><span class="token">dispatcher 104</span> reviewed the load sheet for <span class="pii">a named customer</span><span class="token">customer 219</span>.</p><p>The first route was rejected because the pallet count was incorrect. The dispatcher corrected it and verified the revised route.</p></div><p class="exhibit-note">The correction and verified result remain visible while direct identifiers become role tokens.</p><a class="text-link" href="/terms" data-route>Read the terms ↗</a></div></div></section>';
+    '<section class="section"><div class="wrap security-layout"><div><h2>A controlled process.</h2><div class="term-list"><div class="term"><strong>Required approvals</strong><p>A written scope comes before access. Only approved sources may be accessed read-only. Buyers receive redacted samples under NDA and with the owner’s approval.</p></div><div class="term"><strong>Planned safeguards</strong><p>A vetted third-party specialist is contemplated for de-identification. Encryption in transit and at rest is the target. An approximately one-week raw-file hold followed by deletion is intended. Provider, access, retention, and deletion arrangements must be agreed and technically ready before work begins.</p></div><div class="term"><strong>Contractual controls</strong><p>Off-limits lists are binding. The owner retains the underlying data. Use, duration, retention, payment, and any exclusivity are defined in writing. Exclusivity is never perpetual.</p></div><div class="term"><strong>Remaining risks</strong><p>De-identification reduces risk but cannot eliminate re-identification or confidentiality risk. Rights review may prevent a record from being licensed.</p></div></div></div>' + deidentificationRecord("security-sample-record") + '</div></section>';
 }
 
 function legalPage(kind) {
@@ -600,6 +602,7 @@ let estimatorStarted = false;
 let rotatorTimer;
 let demandTimer;
 let progressListener;
+let stopWorkingTrace = () => {};
 function setupPage(path) {
   const compactRows = window.matchMedia("(max-width:820px)").matches;
   $$(".catalog-entry, details.term").forEach(row => { row.open = !compactRows; });
@@ -614,7 +617,7 @@ function setupPage(path) {
   clearInterval(demandTimer);
   setupObserver();
   setupProgress();
-  setupHero();
+  setupStoryMotion();
   setupRotator();
   setupDemand();
   setupCalculator();
@@ -662,19 +665,9 @@ function setupProgress() {
   window.addEventListener("scroll", update, {passive: true});
 }
 
-function setupHero() {
-  const hero = $("[data-hero]");
-  if (!hero || motionReduced() || !window.matchMedia("(pointer:fine)").matches) return;
-  hero.addEventListener("pointermove", function (event) {
-    const rect = hero.getBoundingClientRect();
-    hero.style.setProperty("--gx", (event.clientX - rect.left - 270) + "px");
-    hero.style.setProperty("--gy", (event.clientY - rect.top - 270) + "px");
-    const markNode = $("[data-hero-mark]");
-    if (markNode) {
-      markNode.style.setProperty("--driftx", ((event.clientX - rect.left - rect.width / 2) / rect.width * 16).toFixed(1) + "px");
-      markNode.style.setProperty("--drifty", ((event.clientY - rect.top - rect.height / 2) / rect.height * 10).toFixed(1) + "px");
-    }
-  });
+function setupStoryMotion() {
+  stopWorkingTrace();
+  stopWorkingTrace = setupWorkingTrace(document, motionReduced());
 }
 
 function setupRotator() {
@@ -1002,6 +995,10 @@ document.addEventListener("click", async function (event) {
     $$(".pii", exhibit).forEach(node => { node.hidden = action === "redaction-on"; });
     $$("button", exhibit).forEach(function (button) { button.classList.remove("active"); button.setAttribute("aria-pressed", String(button === actionElement)); });
     actionElement.classList.add("active");
+    const status = $("[data-redaction-status]", exhibit);
+    if (status) status.textContent = action === "redaction-on"
+      ? "De-identified: role tokens replace direct identifiers. The correction and outcome are preserved."
+      : "Original: illustrative identifiers are visible.";
   }
   if (action === "toggle-systems") {
     estimatorState.showSystems = !estimatorState.showSystems;
@@ -1022,6 +1019,7 @@ document.addEventListener("click", async function (event) {
     actionElement.textContent = paused ? "Pause motion" : "Resume motion";
     clearInterval(rotatorTimer);
     clearInterval(demandTimer);
+    setupStoryMotion();
     if (paused) { setupRotator(); setupDemand(); }
   }
   if (action === "quiz-back") {
@@ -1243,6 +1241,7 @@ window.matchMedia("(prefers-reduced-motion: reduce)").addEventListener("change",
   clearInterval(rotatorTimer);
   clearInterval(demandTimer);
   setupObserver();
+  setupStoryMotion();
   setupRotator();
   setupDemand();
 });

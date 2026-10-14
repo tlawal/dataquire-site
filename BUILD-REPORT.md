@@ -24,7 +24,7 @@ The newsletter remains in the footer, preserving its original Ledger submission 
 - Instrument Sans supplies the principal hierarchy, including display headlines. Fraunces italic provides focused emphasis. Fonts remain locally bundled and licensed through the existing font packages.
 - The established DataQuire name and quire mark remain. A lightweight original SVG expands that mark into gathered leaves. No image or animation dependency was added.
 - Broad contrast surfaces, restrained rules, numbered catalog entries, and simple native disclosures replace the Folio scene system.
-- Motion is limited to short feedback and navigation transitions. Pause motion and `prefers-reduced-motion` are supported.
+- Motion now explains the record: one gather entrance for the hero leaves, scroll-driven Task / Correction / Outcome states, and role-token feedback in the de-identification exhibit. Pause motion and `prefers-reduced-motion` are supported. The decorative page fade was removed.
 - Shared qualifications sit in one “Advisory & Legal Notes” drawer near the footer. Relevant contact-capture consent, result qualifications, and the hypothetical walkthrough label remain at the point of use.
 
 The hypothetical walkthrough explicitly assumes clear rights, technical readiness, buyer interest, and signed terms. It states that no historical engagement or guaranteed timeline is represented. No customer names, transaction history, claimed buyer relationships, or fabricated statistics were introduced.
@@ -53,7 +53,7 @@ See `docs/FUNCTIONAL-BASELINE.md` and `tests/fixtures/redesign-baseline.json`.
 
 ## Verification results
 
-`npm run verify` passes syntax checks, ESLint, TypeScript, 26 tests, production build, and static validation of all 25 routes plus 404. Checks cover unique SEO/canonical metadata, JSON-LD, main/H1 structure, semantic heading order, complete labels, private assets, forms, internal links and fragments, five-section architecture, illustrative labeling, absence of placeholders/Folio labels/em dashes, and text separation.
+`npm run verify` passes syntax checks, ESLint, TypeScript, 28 tests, production build, and static validation of all 25 routes plus 404. Checks cover unique SEO/canonical metadata, JSON-LD, main/H1 structure, semantic heading order, complete labels, private assets, forms, internal links and fragments, five-section architecture, illustrative labeling, absence of placeholders/Folio labels/em dashes, and text separation.
 
 Production browser QA used the isolated receiver on port 4174. No fake lead was sent to Apps Script or any live service.
 
@@ -73,3 +73,11 @@ Machine-readable route, form, and focus evidence is in `output/qa/rebuild/`.
 ## Limits
 
 Actual payout timing, buyer demand, transaction outcomes, and availability of specialists are not verified and are not represented as facts. The 30-day path is hypothetical. Legal policies still require attorney review. Authentication, private-channel access, and financial dashboards still depend on unconfigured services. Live webhook delivery was intentionally not tested; integration code and endpoint configuration are preserved, while browser submissions used mocks. Native OS reduced-motion emulation was unavailable in the browser interface; the media query was checked in source and the equivalent pause control was tested in the rendered product. Existing Netlify publication is driven by the requested Git push; a successful push alone does not confirm completion of a Netlify deployment.
+
+## Copy and motion follow-up
+
+The requested H1, hero subheading, and second-section H2 were applied verbatim. The social artwork was aligned with the new H1. A shared illustrative de-identification component now appears in the homepage trust area and on Security. The homepage still has five sections and exactly three process steps.
+
+The hero leaf entrance runs once for 0.85 seconds with small staggered offsets. Scrolling updates the active task, correction, or outcome and its explanation. One passive listener schedules a single animation-frame update; cleanup removes listeners and pending work during client navigation or a motion-preference change. Reduced motion presents the full trace without scroll-driven changes. No important text waits for animation.
+
+Production browser QA verified nonzero initial leaf transforms, their settled pose, trace stages 0 / 1 / 2 under actual scrolling, keyboard operation of the exhibit, visible control focus, scoped pressed states, status announcements, all three replacement tokens, and a static Pause motion state. Home and Security were inspected at 375, 768, and 1440 pixels in both exhibit modes with no overflow or console errors. Two regression tests cover exact requested copy, the shared exhibit, forward/reverse scroll states, listener cleanup, and the reduced-motion alternative. Evidence is under `output/qa/motion-pass/`. All frozen contract and legal-source checks continue to pass.
