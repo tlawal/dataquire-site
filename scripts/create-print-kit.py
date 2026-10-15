@@ -60,7 +60,7 @@ paragraph(c,48,518,"DataQuire values, prepares, and licenses operational records
 c.setStrokeColor(LINE)
 c.line(48,445,564,445)
 for n,title,copy,y in [
-    ("01","Get an indicative range.","About 2 minutes. No commitment. No raw file uploads.",407),
+    ("01","Get your estimate.","About 2 minutes. No commitment. No raw file uploads.",407),
     ("02","Define the boundary.","Rights, approved sources, exclusions, and processing are agreed before access.",324),
     ("03","Approve every deal.","Buyers see approved de-identified samples. Scope and payment are in writing.",241)
 ]:
@@ -70,7 +70,7 @@ for n,title,copy,y in [
 c.line(48,192,564,192)
 text(c,48,157,"See what your data is worth",21,"Times-Bold")
 text(c,48,131,"dataquire.si/estimator",12,color=ACCENT)
-text(c,48,103,"No upfront fees. Indicative estimates are not offers.",10,color=SOFT)
+text(c,48,103,"No upfront fees. Estimates are not offers.",10,color=SOFT)
 qr(c,477,103,76)
 text(c,48,52,"hello@dataquire.si",10,color=SOFT)
 text(c,329,52,"De-identification reduces risk; it does not eliminate it.",8,color=SOFT)
@@ -86,13 +86,13 @@ logo(c,27,253,23)
 text(c,27,220,"THE EXIT WITHOUT THE EXIT",8,color=ACCENT)
 text(c,27,188,"A license for the record",26,"Times-Bold")
 text(c,27,156,"you already own.",26,"Times-Bold")
-paragraph(c,27,126,"Keep the company and the data. Get an indicative range before deciding whether to explore a license.",305,10,15)
+paragraph(c,27,126,"Keep the company and the data. Get your estimate before deciding whether to explore a license.",305,10,15)
 c.setStrokeColor(LINE)
 c.line(27,78,423,78)
 text(c,27,55,"See what your data is worth",15,"Times-Bold")
 text(c,27,35,"dataquire.si/estimator",9,color=ACCENT)
 qr(c,356,94,67)
-text(c,27,18,"No upfront fees. Indicative range, not an offer.",7,color=SOFT)
+text(c,27,18,"No upfront fees. Estimates are not offers.",7,color=SOFT)
 # Crop marks remain outside the 6 by 4 in trim boundary.
 c.setLineWidth(.3)
 c.setStrokeColor(SOFT)

@@ -8,13 +8,13 @@ import {setupWorkingTrace} from "../lib/home-motion.js";
 test("requested offer copy and meaningful motion stay within the five-section home", () => {
   const {document} = parseHTML(routeContent("/"));
   assert.equal(document.querySelector("h1").textContent, "Turn the knowledge inside your business into revenue.");
-  assert.equal(document.querySelector(".offer-copy > p").textContent, "Indicative range: $20K–$5M, depending on the record, rights, and scope. DataQuire advises you through the process.");
+  assert.equal(document.querySelector(".offer-copy > p").textContent, "Earn $20K–$5M for operational data. DataQuire advises you through the process.");
   assert.equal(document.querySelector(".problem-heading h2").textContent.replace(/\s+/g," "), "AI can read the answer. It needs the work behind it.");
   assert.equal(document.querySelectorAll(".gather-leaf").length,3);
   assert.deepEqual([...document.querySelectorAll("[data-trace-step]")].map(node=>node.textContent),["Task","Correction","Outcome"]);
   const exhibit=document.querySelector(".process-section [data-redaction]");
   assert.ok(exhibit);
-  assert.match(exhibit.querySelector(".exhibit-label").textContent,/Illustrative/);
+  assert.equal(exhibit.querySelector(".exhibit-label").textContent,"Sample record. No client data.");
   assert.equal(exhibit.querySelectorAll(".pii").length,3);
   assert.equal(exhibit.querySelectorAll(".token").length,3);
   assert.equal(exhibit.querySelector("[data-redaction-status]").getAttribute("role"),"status");
@@ -85,20 +85,33 @@ test("home follows the five-scene architecture and preserves the sole hero actio
   assert.match(main.textContent, /100\+ employees/);
 });
 
-test("walkthrough is explicitly hypothetical and notes are consolidated in a disclosure", () => {
+test("the visible deal process retains all five steps and consolidates qualifications", () => {
   const {document} = parseHTML(routeContent("/"));
   const walkthrough = document.querySelector(".engagement-walkthrough");
-  assert.match(walkthrough.querySelector("summary").textContent, /Illustrative engagement/);
-  assert.match(walkthrough.textContent, /not a past client engagement/);
-  assert.match(walkthrough.textContent, /not a past client engagement, transaction claim, or promised timeline/);
-  assert.match(walkthrough.textContent, /Days 28–30/);
+  assert.equal(walkthrough.tagName,"DIV");
+  assert.equal(walkthrough.querySelector("h3").textContent,"From first call to payout.");
+  assert.equal(walkthrough.querySelector(".walkthrough-heading p").textContent,"How a deal moves.");
+  assert.equal(walkthrough.querySelector(".walkthrough-label").textContent,"Timelines vary by deal.");
+  assert.equal(walkthrough.querySelector(".walkthrough-content > p:last-child").textContent,"Some engagements end without a license.");
+  assert.deepEqual([...walkthrough.querySelectorAll(".engagement-timeline > li")].map(node=>[...node.children].map(child=>child.textContent)),[
+    ["Days 1–3","Onboard & define","Confirm the owner, sources, and exclusions."],
+    ["Days 4–10","Review & prepare","Assess rights and quality; prepare the agreed sample."],
+    ["Days 11–20","Buyer review","Share only an approved, redacted preview under NDA."],
+    ["Days 21–27","Agree the license","Define use, duration, retention, price, and payment."],
+    ["Days 28–30","Deliver & receive payment","For this example, payment follows delivery within the agreed period."]
+  ]);
   assert.equal(document.querySelectorAll(".advisory-notes details").length, 1);
   assert.match(document.querySelector(".advisory-notes summary").textContent, /Advisory & Legal Notes/);
+  assert.match(document.querySelector(".advisory-notes").textContent,/30-day timeline is an example/);
+  assert.match(document.querySelector(".process-steps li:first-child p").textContent,/Get your estimate\.$/);
+  assert.equal(document.querySelector(".estimate-caption").textContent,"Your estimate before any commitment.");
 });
 
 test("all routes avoid unfinished evidence, numbering remnants, and copy concatenation", () => {
   for (const route of Object.keys(routeMeta)) {
     const {document} = parseHTML(routeContent(route));
+    assert.doesNotMatch(document.toString(), /\b(indicative|illustrative)\b/i,route);
+    assert.doesNotMatch(routeMeta[route].join(" "), /\b(indicative|illustrative)\b/i,route+" metadata");
     assert.doesNotMatch(document.querySelector(".site-shell, main").textContent, /PLACEHOLDER|Folio\s*\d|—/, route);
     for (const heading of document.querySelectorAll("h1,h2,h3")) {
       assert.doesNotMatch(heading.textContent, / {2,}|\b(law firms)\s+\1\b|knowledgeinside/i, route);

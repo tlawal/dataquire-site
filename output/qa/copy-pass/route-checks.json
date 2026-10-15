@@ -1,0 +1,602 @@
+[
+  {
+    "route": "/",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/estimator",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/buyers",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/refer",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/verticals",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/partners",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/faq",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/contact",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/security",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/privacy",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/terms",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/answers",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/one-pager",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/templates",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/session",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/dashboard",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/scout",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/answers/company-data-value",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/answers/sell-company-data",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/answers/data-licensing-deal",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/answers/licensing-vs-selling",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/answers/is-data-licensing-legal",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/answers/who-buys-company-data",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/answers/data-source-guides",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/answers/exclusivity",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "/",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/estimator",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/buyers",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/refer",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/verticals",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/partners",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/faq",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/contact",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/security",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/privacy",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/terms",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/answers",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/one-pager",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/templates",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/session",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/dashboard",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/scout",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/answers/company-data-value",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/answers/sell-company-data",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/answers/data-licensing-deal",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/answers/licensing-vs-selling",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/answers/is-data-licensing-legal",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/answers/who-buys-company-data",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/answers/data-source-guides",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/answers/exclusivity",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "route": "/",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/estimator",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/buyers",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/refer",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/verticals",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/partners",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/faq",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/contact",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/security",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/privacy",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/terms",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/answers",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/one-pager",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/templates",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/session",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/dashboard",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/scout",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/answers/company-data-value",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/answers/sell-company-data",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/answers/data-licensing-deal",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/answers/licensing-vs-selling",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/answers/is-data-licensing-legal",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/answers/who-buys-company-data",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/answers/data-source-guides",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "/answers/exclusivity",
+    "h1": 1,
+    "main": 1,
+    "oldCopy": false,
+    "overflow": false,
+    "width": 1440
+  }
+]

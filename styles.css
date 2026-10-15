@@ -818,33 +818,26 @@ button:disabled {
 }
 .engagement-walkthrough {
   border-top: 1px solid #ffffff30;
-  margin-top: 30px;
-  padding-top: 22px;
+  margin-top: 44px;
+  padding-top: 32px;
 }
-.engagement-walkthrough > summary {
+.walkthrough-heading {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  list-style: none;
-  font-size: 13px;
+  align-items: baseline;
+  gap: 16px 28px;
 }
-.engagement-walkthrough summary::-webkit-details-marker {
-  display: none;
+.walkthrough-heading h3 {
+  font-size: clamp(24px, 2.5vw, 32px);
+  letter-spacing: -0.035em;
 }
-.engagement-walkthrough > summary > span + span {
+.walkthrough-heading p {
   color: #c6d7d4;
-  font-size: 12px;
-}
-.engagement-walkthrough i {
-  font-style: normal;
-  display: inline-block;
-  margin-left: 16px;
-}
-.engagement-walkthrough[open] i {
-  transform: rotate(45deg);
+  font-size: 14px;
+  margin: 0;
 }
 .walkthrough-content {
-  padding-top: 28px;
+  padding-top: 18px;
 }
 .walkthrough-content > p {
   font-size: 12px;
@@ -853,8 +846,7 @@ button:disabled {
   word-spacing: 0.05em;
 }
 .walkthrough-label {
-  border-left: 2px solid #eaa88e;
-  padding-left: 18px;
+  margin: 0;
 }
 .engagement-timeline {
   display: grid;
@@ -2226,13 +2218,10 @@ form > .button {
   .process-trust > span {
     margin-right: 9px;
   }
-  .engagement-walkthrough > summary {
+  .walkthrough-heading {
     display: block;
   }
-  .engagement-walkthrough > summary > span {
-    display: block;
-  }
-  .engagement-walkthrough > summary > span + span {
+  .walkthrough-heading p {
     margin-top: 10px;
   }
   .engagement-timeline {
@@ -2646,12 +2635,6 @@ form > .button {
   }
   .engagement-walkthrough {
     margin-top: 23px;
-  }
-  .engagement-walkthrough > summary {
-    font-size: 13px;
-  }
-  .engagement-walkthrough > summary > span + span {
-    font-size: 11px;
   }
   .engagement-timeline li {
     grid-template-columns: 80px 1fr;

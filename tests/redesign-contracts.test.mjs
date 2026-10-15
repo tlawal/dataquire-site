@@ -73,10 +73,14 @@ test("first-link attribution survives a new design with the same twelve-calendar
   assert.equal(next.expiresAt,"2028-10-14T12:00:00.000Z");
 });
 
-// The legal page source is deliberately preserved, including review qualifications.
+// Only the requested label change is allowed; the original legal substance stays frozen.
 test("privacy and terms retain their complete original legal substance",async()=>{
   const source=await fs.readFile(new URL("../app.js",import.meta.url),"utf8");
   const start=source.indexOf("function legalPage(");
   const end=source.indexOf("\nfunction onePager(",start);
-  assert.equal(crypto.createHash("sha256").update(source.slice(start,end)).digest("hex"),baseline.legalPageSha256);
+  const legalSource=source.slice(start,end);
+  const approvedWording='["Estimates", "Estimates are not offers, promises, historical performance, or a commitment to take a package to market."]';
+  assert.ok(legalSource.includes(approvedWording));
+  const originalWording=legalSource.replace(approvedWording,approvedWording.replace('"Estimates are','"Indicative estimates are'));
+  assert.equal(crypto.createHash("sha256").update(originalWording).digest("hex"),baseline.legalPageSha256);
 });

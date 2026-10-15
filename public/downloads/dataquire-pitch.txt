@@ -1,7 +1,7 @@
 THE 20-SECOND PITCH
 
 Your operational records may have licensing value for AI training or evaluation.
-DataQuire gives you an indicative prototype range first, de-identifies data before
+DataQuire starts with your estimate, de-identifies data before
 any buyer sees it, and nothing moves without your written approval.
 
 THE SEQUENCE
