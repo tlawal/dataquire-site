@@ -38,7 +38,7 @@ test("live private records pause offscreen and in hidden tabs, clean up, and sta
   document.addEventListener=(name,callback)=>listeners.set(name,callback);
   document.removeEventListener=(name,callback)=>{if(listeners.get(name)===callback)listeners.delete(name);};
   globalThis.window={
-    setInterval(callback,delay){assert.equal(delay,1000);const id=++serial;timers.set(id,callback);return id;},
+    setInterval(callback,delay){assert.equal(delay,5000);const id=++serial;timers.set(id,callback);return id;},
     clearInterval(id){timers.delete(id);},
     IntersectionObserver:class {
     constructor(callback){notify=callback;}

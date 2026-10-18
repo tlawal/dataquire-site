@@ -103,3 +103,7 @@ Verification: the 28-test suite covers the updated copy, exact record order, seq
 ## Caption restoration, October 18
 
 The timed-loop update had dropped the three specific descriptions from the earlier scroll interaction. Restored the original Task, Correction, and Outcome wording and synchronized each caption with its matching loop stage. The overview sentence appears during reset and in the static reduced-motion/Pause motion state. The record-name rotation is unchanged. A regression assertion now checks every caption across a complete cycle and reset. All 28 tests, the production build, and static route checks pass. Browser checks at 375, 768, and 1440 pixels captured all descriptions with stable card height, no horizontal overflow, and no console warnings or errors. Evidence is in `output/qa/caption-fix/`.
+
+## Caption pacing, October 18
+
+Slowed the synchronized timeline and captions from one second to five seconds per stage so the descriptions have reading time. Record names continue fading every 2.5 seconds. The existing cycle, reset, pause, visibility, reduced-motion, and cleanup checks pass with the updated interval. `npm run verify` passes all 28 tests and the production build. A browser timing sample confirmed consecutive caption changes approximately five seconds apart, unchanged record rotation, and no console warnings/errors. Evidence is in `output/qa/caption-pace/`.

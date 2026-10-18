@@ -1,0 +1,30 @@
+[
+  {
+    "elapsed": 8,
+    "caption": "A delivery appointment changes. Dispatch needs a route that meets the new window.",
+    "recordDuration": "20s",
+    "secondRecordDelay": "2.5s",
+    "stage": "0"
+  },
+  {
+    "elapsed": 4639,
+    "caption": "An incorrect pallet count invalidates the first route. Dispatch checks and corrects the load sheet.",
+    "recordDuration": "20s",
+    "secondRecordDelay": "2.5s",
+    "stage": "1"
+  },
+  {
+    "elapsed": 9810,
+    "caption": "The revised route meets capacity and timing requirements. The result can be checked.",
+    "recordDuration": "20s",
+    "secondRecordDelay": "2.5s",
+    "stage": "2"
+  },
+  {
+    "elapsed": 14976,
+    "caption": "The task, the correction, and a verified outcome belong to the same working record.",
+    "recordDuration": "20s",
+    "secondRecordDelay": "2.5s",
+    "stage": "3"
+  }
+]
