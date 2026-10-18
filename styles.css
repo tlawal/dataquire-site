@@ -457,7 +457,10 @@ button:disabled {
   color: var(--paper);
 }
 .public-record {
-  background: #e5ebe7;
+  background: #e9eeea;
+  color: var(--ink-soft);
+}
+.public-record h3 {
   color: var(--ink-soft);
 }
 .contrast-label {
@@ -473,6 +476,31 @@ button:disabled {
 .data-contrast p {
   font-size: 14px;
   margin-top: 18px;
+}
+.record-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 16px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #f3b39b;
+}
+.private-record.is-live .record-examples {
+  display: grid;
+  min-height: 1.6em;
+}
+.private-record.is-live .record-examples li {
+  grid-area: 1 / 1;
+  opacity: 0;
+  animation: record-example 20s linear infinite;
+  animation-delay: calc(var(--record-index) * 2.5s);
+}
+@keyframes record-example {
+  0%, 12.5%, 100% { opacity: 0; }
+  1%, 11.5% { opacity: 1; }
 }
 .record-trace {
   display: grid;
@@ -513,16 +541,18 @@ button:disabled {
   background: #e4eeeb60;
   transition: background 0.24s ease;
 }
-.record-trace .is-current {
-  color: #f3b39b;
-}
-.record-trace .is-current:before,
 .record-trace .is-complete:before {
   background: #f3b39b;
   border-color: #f3b39b;
 }
-.record-trace .is-complete:after {
+.record-trace li.is-connected:after {
   background: #f3b39b;
+}
+.private-record.is-live .record-examples li {
+  animation-play-state: paused;
+}
+.private-record.is-running .record-examples li {
+  animation-play-state: running;
 }
 .data-contrast .trace-caption {
   font-size: 12px;

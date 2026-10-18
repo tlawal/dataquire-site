@@ -1,0 +1,161 @@
+[
+  {
+    "cardWidth": 339,
+    "listWidth": 287,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "cardWidth": 350,
+    "listWidth": 300,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "examples": [
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Signed contracts"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Month-end closes"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Internal SOPs"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Code reviews"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Support tickets"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Sales call notes"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Dispatch logs"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Change orders"
+      }
+    ],
+    "filled": 3,
+    "live": false,
+    "mode": "paused",
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "examples": [
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Signed contracts"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Month-end closes"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Internal SOPs"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Code reviews"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Support tickets"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Sales call notes"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Dispatch logs"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Change orders"
+      }
+    ],
+    "filled": 3,
+    "live": false,
+    "mode": "paused",
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "examples": [
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Signed contracts"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Month-end closes"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Internal SOPs"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Code reviews"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Support tickets"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Sales call notes"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Dispatch logs"
+      },
+      {
+        "animation": "none",
+        "opacity": "1",
+        "text": "Change orders"
+      }
+    ],
+    "filled": 3,
+    "live": false,
+    "mode": "paused",
+    "overflow": false,
+    "width": 1440
+  }
+]

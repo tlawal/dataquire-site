@@ -1,0 +1,580 @@
+[
+  {
+    "elapsed": 0,
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Signed contracts"
+    ],
+    "right": "none",
+    "stage": "0"
+  },
+  {
+    "elapsed": 513,
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Signed contracts"
+    ],
+    "right": "none",
+    "stage": "0"
+  },
+  {
+    "elapsed": 1029,
+    "filled": [
+      true,
+      true,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Signed contracts"
+    ],
+    "right": "none",
+    "stage": "1"
+  },
+  {
+    "elapsed": 1550,
+    "filled": [
+      true,
+      true,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Signed contracts"
+    ],
+    "right": "none",
+    "stage": "1"
+  },
+  {
+    "elapsed": 2064,
+    "filled": [
+      true,
+      true,
+      true
+    ],
+    "height": 402,
+    "records": [],
+    "right": "none",
+    "stage": "2"
+  },
+  {
+    "elapsed": 2579,
+    "filled": [
+      true,
+      true,
+      true
+    ],
+    "height": 402,
+    "records": [
+      "Month-end closes"
+    ],
+    "right": "none",
+    "stage": "2"
+  },
+  {
+    "elapsed": 3095,
+    "filled": [
+      false,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Month-end closes"
+    ],
+    "right": "none",
+    "stage": "3"
+  },
+  {
+    "elapsed": 3611,
+    "filled": [
+      false,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Month-end closes"
+    ],
+    "right": "none",
+    "stage": "3"
+  },
+  {
+    "elapsed": 4121,
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Month-end closes"
+    ],
+    "right": "none",
+    "stage": "0"
+  },
+  {
+    "elapsed": 4639,
+    "filled": [
+      true,
+      true,
+      false
+    ],
+    "height": 402,
+    "records": [],
+    "right": "none",
+    "stage": "1"
+  },
+  {
+    "elapsed": 5156,
+    "filled": [
+      true,
+      true,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Internal SOPs"
+    ],
+    "right": "none",
+    "stage": "1"
+  },
+  {
+    "elapsed": 5674,
+    "filled": [
+      true,
+      true,
+      true
+    ],
+    "height": 402,
+    "records": [
+      "Internal SOPs"
+    ],
+    "right": "none",
+    "stage": "2"
+  },
+  {
+    "elapsed": 6184,
+    "filled": [
+      true,
+      true,
+      true
+    ],
+    "height": 402,
+    "records": [
+      "Internal SOPs"
+    ],
+    "right": "none",
+    "stage": "2"
+  },
+  {
+    "elapsed": 6698,
+    "filled": [
+      false,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Internal SOPs"
+    ],
+    "right": "none",
+    "stage": "3"
+  },
+  {
+    "elapsed": 7209,
+    "filled": [
+      false,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [],
+    "right": "none",
+    "stage": "3"
+  },
+  {
+    "elapsed": 7721,
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Code reviews"
+    ],
+    "right": "none",
+    "stage": "0"
+  },
+  {
+    "elapsed": 8232,
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Code reviews"
+    ],
+    "right": "none",
+    "stage": "0"
+  },
+  {
+    "elapsed": 8750,
+    "filled": [
+      true,
+      true,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Code reviews"
+    ],
+    "right": "none",
+    "stage": "1"
+  },
+  {
+    "elapsed": 9265,
+    "filled": [
+      true,
+      true,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Code reviews"
+    ],
+    "right": "none",
+    "stage": "1"
+  },
+  {
+    "elapsed": 9774,
+    "filled": [
+      true,
+      true,
+      true
+    ],
+    "height": 402,
+    "records": [],
+    "right": "none",
+    "stage": "2"
+  },
+  {
+    "elapsed": 10288,
+    "filled": [
+      true,
+      true,
+      true
+    ],
+    "height": 402,
+    "records": [
+      "Support tickets"
+    ],
+    "right": "none",
+    "stage": "2"
+  },
+  {
+    "elapsed": 10798,
+    "filled": [
+      false,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Support tickets"
+    ],
+    "right": "none",
+    "stage": "3"
+  },
+  {
+    "elapsed": 11317,
+    "filled": [
+      false,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Support tickets"
+    ],
+    "right": "none",
+    "stage": "3"
+  },
+  {
+    "elapsed": 11836,
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Support tickets"
+    ],
+    "right": "none",
+    "stage": "0"
+  },
+  {
+    "elapsed": 12352,
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Sales call notes"
+    ],
+    "right": "none",
+    "stage": "0"
+  },
+  {
+    "elapsed": 12864,
+    "filled": [
+      true,
+      true,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Sales call notes"
+    ],
+    "right": "none",
+    "stage": "1"
+  },
+  {
+    "elapsed": 13379,
+    "filled": [
+      true,
+      true,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Sales call notes"
+    ],
+    "right": "none",
+    "stage": "1"
+  },
+  {
+    "elapsed": 13896,
+    "filled": [
+      true,
+      true,
+      true
+    ],
+    "height": 402,
+    "records": [
+      "Sales call notes"
+    ],
+    "right": "none",
+    "stage": "2"
+  },
+  {
+    "elapsed": 14414,
+    "filled": [
+      true,
+      true,
+      true
+    ],
+    "height": 402,
+    "records": [
+      "Sales call notes"
+    ],
+    "right": "none",
+    "stage": "2"
+  },
+  {
+    "elapsed": 14928,
+    "filled": [
+      false,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Dispatch logs"
+    ],
+    "right": "none",
+    "stage": "3"
+  },
+  {
+    "elapsed": 15444,
+    "filled": [
+      false,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Dispatch logs"
+    ],
+    "right": "none",
+    "stage": "3"
+  },
+  {
+    "elapsed": 15961,
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Dispatch logs"
+    ],
+    "right": "none",
+    "stage": "0"
+  },
+  {
+    "elapsed": 16478,
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Dispatch logs"
+    ],
+    "right": "none",
+    "stage": "0"
+  },
+  {
+    "elapsed": 16996,
+    "filled": [
+      true,
+      true,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Dispatch logs"
+    ],
+    "right": "none",
+    "stage": "1"
+  },
+  {
+    "elapsed": 17516,
+    "filled": [
+      true,
+      true,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Change orders"
+    ],
+    "right": "none",
+    "stage": "1"
+  },
+  {
+    "elapsed": 18034,
+    "filled": [
+      true,
+      true,
+      true
+    ],
+    "height": 402,
+    "records": [
+      "Change orders"
+    ],
+    "right": "none",
+    "stage": "2"
+  },
+  {
+    "elapsed": 18557,
+    "filled": [
+      true,
+      true,
+      true
+    ],
+    "height": 402,
+    "records": [
+      "Change orders"
+    ],
+    "right": "none",
+    "stage": "2"
+  },
+  {
+    "elapsed": 19071,
+    "filled": [
+      false,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Change orders"
+    ],
+    "right": "none",
+    "stage": "3"
+  },
+  {
+    "elapsed": 19590,
+    "filled": [
+      false,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [],
+    "right": "none",
+    "stage": "3"
+  },
+  {
+    "elapsed": 20103,
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Signed contracts"
+    ],
+    "right": "none",
+    "stage": "0"
+  },
+  {
+    "elapsed": 20623,
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Signed contracts"
+    ],
+    "right": "none",
+    "stage": "0"
+  },
+  {
+    "elapsed": 21137,
+    "filled": [
+      true,
+      true,
+      false
+    ],
+    "height": 402,
+    "records": [
+      "Signed contracts"
+    ],
+    "right": "none",
+    "stage": "1"
+  }
+]

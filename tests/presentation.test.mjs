@@ -9,8 +9,13 @@ test("requested offer copy and meaningful motion stay within the five-section ho
   const {document} = parseHTML(routeContent("/"));
   assert.equal(document.querySelector("h1").textContent, "Turn the knowledge inside your business into revenue.");
   assert.equal(document.querySelector(".offer-copy > p").textContent, "Earn $20K–$5M for operational data. DataQuire advises you through the process.");
-  assert.equal(document.querySelector(".problem-heading h2").textContent.replace(/\s+/g," "), "AI can read the answer. It needs the work behind it.");
+  assert.equal(document.querySelector(".problem-heading h2").textContent.replace(/\s+/g," "), "AI knows the answers. It needs the work behind them.");
   assert.equal(document.querySelectorAll(".gather-leaf").length,3);
+  assert.deepEqual([...document.querySelectorAll(".record-examples li")].map(node=>node.textContent),[
+    "Signed contracts","Month-end closes","Internal SOPs","Code reviews",
+    "Support tickets","Sales call notes","Dispatch logs","Change orders"
+  ]);
+  assert.equal(document.querySelector(".record-examples").hasAttribute("aria-live"),false);
   assert.deepEqual([...document.querySelectorAll("[data-trace-step]")].map(node=>node.textContent),["Task","Correction","Outcome"]);
   const exhibit=document.querySelector(".process-section [data-redaction]");
   assert.ok(exhibit);
@@ -21,45 +26,62 @@ test("requested offer copy and meaningful motion stay within the five-section ho
   for(const button of exhibit.querySelectorAll("button")) assert.ok(exhibit.querySelector("#"+button.getAttribute("aria-controls")));
 });
 
-test("scroll trace advances and reverses, cleans up after navigation, and stays complete without motion",()=>{
+test("live private records pause offscreen and in hidden tabs, clean up, and stay complete without motion",()=>{
   const {document}=parseHTML(routeContent("/"));
-  const trace=document.querySelector("[data-working-trace]");
+  const card=document.querySelector("[data-private-record]");
   const originalWindow=globalThis.window;
-  const listeners=new Map(), frames=new Map();
-  let top=800, serial=0;
-  trace.getBoundingClientRect=()=>({top});
-  globalThis.window={innerHeight:900,
-    requestAnimationFrame(callback){const id=++serial;frames.set(id,callback);return id;},
-    cancelAnimationFrame(id){frames.delete(id);},
-    addEventListener(name,callback){listeners.set(name,callback);},
-    removeEventListener(name,callback){if(listeners.get(name)===callback)listeners.delete(name);}
-  };
-  const scrollTo=position=>{
-    top=position;
-    listeners.get("scroll")();
-    for(const [id,callback] of frames){frames.delete(id);callback();}
-  };
+  const listeners=new Map();
+  const timers=new Map();
+  let serial=0;
+  let notify, observed, disconnected=false, hidden=false;
+  Object.defineProperty(document,"hidden",{get:()=>hidden});
+  document.addEventListener=(name,callback)=>listeners.set(name,callback);
+  document.removeEventListener=(name,callback)=>{if(listeners.get(name)===callback)listeners.delete(name);};
+  globalThis.window={
+    setInterval(callback,delay){assert.equal(delay,1000);const id=++serial;timers.set(id,callback);return id;},
+    clearInterval(id){timers.delete(id);},
+    IntersectionObserver:class {
+    constructor(callback){notify=callback;}
+    observe(node){observed=node;}
+    disconnect(){disconnected=true;}
+  }};
   try {
     const stop=setupWorkingTrace(document,false);
-    assert.equal(trace.dataset.traceStage,"0");
-    scrollTo(500);
-    assert.equal(trace.dataset.traceStage,"1");
-    assert.equal(trace.querySelector('[aria-current="step"]').textContent,"Correction");
-    scrollTo(250);
-    assert.equal(trace.dataset.traceStage,"2");
-    assert.match(trace.querySelector("[data-trace-caption]").textContent,/result can be checked/);
-    scrollTo(800);
-    assert.equal(trace.dataset.traceStage,"0");
-    listeners.get("scroll")();
+    assert.equal(observed,card);
+    assert.equal(card.classList.contains("is-live"),true);
+    assert.equal(card.classList.contains("is-running"),false);
+    notify([{target:card,isIntersecting:true}]);
+    assert.equal(card.classList.contains("is-running"),true);
+    assert.equal(timers.size,1);
+    const tick=[...timers.values()][0];
+    for(const count of [1,2,3,0,1]) {
+      assert.equal(card.querySelectorAll(".is-complete").length,count);
+      tick();
+    }
+    hidden=true;
+    listeners.get("visibilitychange")();
+    assert.equal(card.classList.contains("is-running"),false);
+    assert.equal(timers.size,0);
+    hidden=false;
+    listeners.get("visibilitychange")();
+    assert.equal(card.classList.contains("is-running"),true);
+    notify([{target:card,isIntersecting:false}]);
+    assert.equal(card.classList.contains("is-running"),false);
     stop();
+    assert.equal(disconnected,true);
     assert.equal(listeners.size,0);
-    assert.equal(frames.size,0);
-    assert.equal(trace.classList.contains("trace-enhanced"),false);
+    assert.equal(timers.size,0);
+    assert.equal(card.classList.contains("is-live"),false);
+    assert.equal(card.querySelectorAll(".is-complete").length,3);
+    observed=null;
     setupWorkingTrace(document,true)();
+    assert.equal(observed,null);
     assert.equal(listeners.size,0);
-    assert.equal(trace.querySelectorAll(".is-complete").length,3);
-    assert.equal(trace.querySelector("[aria-current]"),null);
-    assert.match(trace.querySelector("[data-trace-caption]").textContent,/same working record/);
+    assert.equal(card.classList.contains("is-live"),false);
+    assert.equal(card.querySelectorAll(".record-examples li").length,8);
+    assert.equal(card.querySelectorAll(".is-complete").length,3);
+    assert.equal(card.querySelector("[aria-current]"),null);
+    assert.match(card.querySelector("[data-trace-caption]").textContent,/same working record/);
   } finally {
     if(originalWindow===undefined) delete globalThis.window;
     else globalThis.window=originalWindow;
