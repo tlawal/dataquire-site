@@ -1985,23 +1985,41 @@ form > .button {
 }
 .cookie {
   position: fixed;
-  right: 22px;
-  bottom: 22px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 90;
-  width: min(420px, calc(100% - 32px));
-  padding: 25px;
+  width: 100%;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
   background: var(--ink);
   color: var(--paper);
-  box-shadow: 0 12px 50px #12343c40;
-  border: 1px solid #ffffff50;
+  border-top: 1px solid #ffffff50;
+}
+.cookie-copy {
+  flex: 1 1 320px;
 }
 .cookie h2 {
-  font-size: 22px;
+  font-size: 14px;
+  letter-spacing: 0;
+  margin: 0;
+  line-height: 1.5;
 }
 .cookie p {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--champ);
-  margin: 15px 0;
+  margin: 0;
+  line-height: 1.5;
+}
+.cookie-settings {
+  font-size: 11px;
+}
+.cookie-settings summary {
+  padding: 12px 0;
+  min-height: 44px;
 }
 .cookie-options {
   display: grid;
@@ -2014,7 +2032,7 @@ form > .button {
 .cookie-actions {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin: 0;
 }
 .cookie-actions .button {
   font-size: 12px;
@@ -2042,6 +2060,24 @@ form > .button {
 }
 .mobile-cta {
   display: none;
+}
+.site-shell {
+  padding-bottom: var(--consent-bar-height, 0px);
+}
+.value-judgment {
+  padding-top: 34px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--line);
+}
+.value-judgment h2 {
+  font-size: 26px;
+}
+.value-judgment p {
+  max-width: 850px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 0;
+  margin-top: 14px;
 }
 @media (min-width: 1500px) {
   .offer-layout {
@@ -2450,6 +2486,18 @@ form > .button {
   }
 }
 @media (max-width: 540px) {
+  .mobile-cta {
+    display: block;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: calc(12px + var(--consent-bar-height, 0px) + env(safe-area-inset-bottom, 0px));
+    z-index: 80;
+    text-align: center;
+  }
+  .site-shell {
+    padding-bottom: calc(74px + var(--consent-bar-height, 0px) + env(safe-area-inset-bottom, 0px));
+  }
   .trust-exhibit {
     padding-top: 30px;
   }
@@ -2954,20 +3002,12 @@ form > .button {
   .footer-copy {
     font-size: 12px;
   }
-  .cookie {
-    right: 16px;
-    bottom: 16px;
-    padding: 21px;
-  }
-  .cookie h2 {
-    font-size: 21px;
-  }
   .cookie-actions {
-    flex-wrap: wrap;
+    gap: 8px;
   }
   .cookie-actions .button {
     font-size: 11px;
-    flex: 1;
+    padding: 10px 12px;
   }
   .engagement-timeline strong {
     font-size: 14px;
@@ -2999,6 +3039,7 @@ form > .button {
   .nav,
   .progress,
   .cookie,
+  .mobile-cta,
   .footer,
   .advisory-notes {
     display: none !important;

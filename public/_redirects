@@ -1,4 +1,14 @@
 /api/lead /.netlify/functions/lead 200
 /api/referral-status /.netlify/functions/referral-status 200
 /r/* /estimator/index.html 200
+/process /#how-it-works 301
+/about / 301
+/for-buyers /buyers 301
+/industries /verticals 301
+/reading-room /answers 301
+/process/ /#how-it-works 301
+/about/ / 301
+/for-buyers/ /buyers 301
+/industries/ /verticals 301
+/reading-room/ /answers 301
 /* /404.html 404

@@ -127,7 +127,7 @@ test("the visible deal process retains all five steps and consolidates qualifica
     ["Days 4–10","Review & prepare","Assess rights and quality; prepare the agreed sample."],
     ["Days 11–20","Buyer review","Share only an approved, redacted preview under NDA."],
     ["Days 21–27","Agree the license","Define use, duration, retention, price, and payment."],
-    ["Days 28–30","Deliver & receive payment","For this example, payment follows delivery within the agreed period."]
+    ["Days 28–30","Deliver & receive payment","Payment follows delivery within the agreed period."]
   ]);
   assert.equal(document.querySelectorAll(".advisory-notes details").length, 1);
   assert.match(document.querySelector(".advisory-notes summary").textContent, /Advisory & Legal Notes/);
@@ -179,4 +179,25 @@ test("buyer conversion targets the buyer intake and keyboard focus stays visible
   assert.match(css, /:focus-visible/);
   assert.match(css, /\[tabindex="-1"\]:focus/);
   assert.match(css, /prefers-reduced-motion/);
+});
+
+test("consent options stay collapsed and mobile conversion and value guidance remain available",()=>{
+  const {document}=parseHTML(routeContent("/estimator"));
+  const cookie=document.querySelector("[data-cookie]");
+  assert.ok(cookie.querySelector("details:not([open]) [data-consent-analytics]"));
+  assert.ok(cookie.querySelector("details:not([open]) [data-consent-advertising]"));
+  assert.ok(cookie.querySelector('[data-action="consent-accept"]'));
+  assert.ok(cookie.querySelector('[data-action="consent-reject"]'));
+  assert.ok(document.querySelector('footer [data-action="consent-settings"]'));
+  assert.equal(document.querySelector(".mobile-cta").getAttribute("href"),"/estimator");
+  const guidance=document.querySelector(".value-judgment");
+  assert.equal(guidance.querySelector("h2").textContent,"How value is judged.");
+  assert.ok(guidance.nextElementSibling.classList.contains("estimator-section"));
+  for(const factor of ["rights clarity","buyer demand","documentation quality","difficulty to recreate","buyer fit"]) assert.ok(guidance.textContent.includes(factor));
+  assert.equal(document.querySelector('footer a[href="/verticals"]').textContent,"Verticals");
+  assert.equal(document.querySelector('footer a[href="/answers"]').textContent,"Answers");
+  for(const route of Object.keys(routeMeta)) {
+    const page=parseHTML(routeContent(route)).document;
+    for(const link of page.querySelectorAll('a[href^="/"]')) assert.doesNotMatch(link.textContent,/↗/,route+" "+link.getAttribute("href"));
+  }
 });

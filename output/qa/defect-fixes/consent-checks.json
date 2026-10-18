@@ -1,0 +1,19 @@
+{
+  "expanded": {
+    "gap": 12,
+    "height": 271.875,
+    "overflow": false
+  },
+  "rejected": {
+    "bar": false,
+    "bottom": 14,
+    "offset": "0px"
+  },
+  "rejectSaved": false,
+  "allowSaved": {
+    "analytics": true,
+    "advertising": false
+  },
+  "ctaDestination": "http://localhost:4174/estimator",
+  "guidance": "How value is judged.\n\nFive factors move a range up or down: rights clarity (can it be licensed cleanly), buyer demand (which buyers need it now), documentation quality (can the work be verified), difficulty to recreate (how hard is it to make from scratch), and buyer fit (how well it matches a real program). Estimates are ranges, not offers."
+}

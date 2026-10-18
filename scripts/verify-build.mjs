@@ -23,6 +23,7 @@ for(const route of Object.keys(routeMeta)) {
 const sitemap=await fs.readFile("dist/sitemap.xml","utf8");
 for(const route of ["/privacy","/terms","/scout","/templates","/dashboard"]) assert.ok(!sitemap.includes("https://dataquire.si"+route+"</loc>"));
 await fs.access("dist/404.html");
+assert.equal(await fs.readFile("dist/_redirects","utf8"),await fs.readFile("public/_redirects","utf8"),"Published redirects must match the verified routing rules");
 const assets=await fs.readdir("dist/_astro");
 for (const asset of assets.filter(name=>name.endsWith(".js"))) {
   const script=await fs.readFile(path.join("dist/_astro",asset),"utf8");

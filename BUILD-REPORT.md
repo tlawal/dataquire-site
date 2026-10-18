@@ -107,3 +107,13 @@ The timed-loop update had dropped the three specific descriptions from the earli
 ## Caption pacing, October 18
 
 Slowed the synchronized timeline and captions from one second to five seconds per stage so the descriptions have reading time. Record names continue fading every 2.5 seconds. The existing cycle, reset, pause, visibility, reduced-motion, and cleanup checks pass with the updated interval. `npm run verify` passes all 28 tests and the production build. A browser timing sample confirmed consecutive caption changes approximately five seconds apart, unchanged record rotation, and no console warnings/errors. Evidence is in `output/qa/caption-pace/`.
+
+## Defect fixes, October 18
+
+Applied the seven requested fixes. Consent is now a full-width bottom bar with 14px heading, 11px explanation, native Options disclosure, and inline Allow/Reject actions. Checkbox identifiers, consent storage and analytics gating remain unchanged. The mobile estimator CTA is restored. A ResizeObserver measures the consent bar so the CTA stays 12px above it and returns to the bottom after dismissal; page-end space and safe-area padding keep footer controls reachable.
+
+Walkthrough step five now says “Payment follows delivery within the agreed period.” The estimator includes the supplied five-factor “How value is judged.” explanation before the questionnaire. Footer labels are Verticals and Answers. Internal links no longer carry an external-link indicator.
+
+Added permanent redirects for `/process`, `/about`, `/for-buyers`, `/industries`, and `/reading-room`, including trailing-slash variants, before the existing Netlify 404 rule. `/process` lands on `/#how-it-works`. Query strings are preserved. Development and the production preview mirror those rules, while the original API and referral rewrites remain unchanged.
+
+`npm run verify` passes all 30 tests, the production build, and all 25 canonical-route checks. New checks exercise actual redirect responses and verify the published redirect file matches the tested source. Browser review covered all 25 routes at 375, 768, and 1440 pixels, with no overflow, em dashes, or console warnings/errors. The collapsed consent bar measures 133px, 75px, and 65px at those widths. Consent rejection, selected consent, persistence, footer reopening, expanded options, CTA clearance, and CTA navigation were exercised. All five redirects were followed in the browser. All frozen engineering modules, payloads, form fields, economics, and legal-substance checks pass. Evidence is in `output/qa/defect-fixes/`; live publication is checked after the main-branch push.

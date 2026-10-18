@@ -1,0 +1,32 @@
+[
+  {
+    "from": "/process",
+    "expected": "/#how-it-works",
+    "url": "http://localhost:4174/#how-it-works",
+    "h1": "Turn the knowledge inside your business into revenue."
+  },
+  {
+    "from": "/about",
+    "expected": "/",
+    "url": "http://localhost:4174/",
+    "h1": "Turn the knowledge inside your business into revenue."
+  },
+  {
+    "from": "/for-buyers",
+    "expected": "/buyers",
+    "url": "http://localhost:4174/buyers",
+    "h1": "Find evidence for the way your models work."
+  },
+  {
+    "from": "/industries",
+    "expected": "/verticals",
+    "url": "http://localhost:4174/verticals",
+    "h1": "Recognize your working record."
+  },
+  {
+    "from": "/reading-room",
+    "expected": "/answers",
+    "url": "http://localhost:4174/answers",
+    "h1": "A record worth understanding."
+  }
+]

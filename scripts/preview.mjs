@@ -4,6 +4,7 @@ import path from "node:path";
 import process from "node:process";
 import {fileURLToPath} from "node:url";
 import {leadMiddleware} from "../lib/webhook-proxy.js";
+import {redirectAlias} from "../lib/route-aliases.js";
 
 const root = path.resolve("dist");
 const mime = {".html":"text/html; charset=utf-8", ".css":"text/css", ".js":"text/javascript", ".json":"application/json", ".xml":"application/xml", ".txt":"text/plain", ".svg":"image/svg+xml", ".png":"image/png", ".jpg":"image/jpeg", ".woff2":"font/woff2", ".pdf":"application/pdf", ".webmanifest":"application/manifest+json"};
@@ -27,7 +28,7 @@ async function serve(req, res) {
 }
 
 export function createPreviewServer(relay = leadMiddleware()) {
-  return http.createServer((req, res) => relay(req, res, () => serve(req, res)));
+  return http.createServer((req, res) => redirectAlias(req, res, () => relay(req, res, () => serve(req, res))));
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
