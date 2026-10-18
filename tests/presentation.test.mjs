@@ -54,8 +54,15 @@ test("live private records pause offscreen and in hidden tabs, clean up, and sta
     assert.equal(card.classList.contains("is-running"),true);
     assert.equal(timers.size,1);
     const tick=[...timers.values()][0];
-    for(const count of [1,2,3,0,1]) {
+    const captions=[
+      "A delivery appointment changes. Dispatch needs a route that meets the new window.",
+      "An incorrect pallet count invalidates the first route. Dispatch checks and corrects the load sheet.",
+      "The revised route meets capacity and timing requirements. The result can be checked.",
+      "The task, the correction, and a verified outcome belong to the same working record."
+    ];
+    for(const [stage,count] of [1,2,3,0,1].entries()) {
       assert.equal(card.querySelectorAll(".is-complete").length,count);
+      assert.equal(card.querySelector("[data-trace-caption]").textContent,captions[stage%4]);
       tick();
     }
     hidden=true;

@@ -1,0 +1,124 @@
+{
+  "samples": 51,
+  "viewports": [
+    {
+      "width": 375,
+      "heights": [
+        389.6953125
+      ],
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "heights": [
+        398.9765625
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "heights": [
+        402
+      ],
+      "overflow": false
+    }
+  ],
+  "states": [
+    {
+      "caption": "A delivery appointment changes. Dispatch needs a route that meets the new window.",
+      "filled": 1,
+      "height": 389.6953125,
+      "overflow": false,
+      "stage": "0",
+      "width": 375
+    },
+    {
+      "caption": "An incorrect pallet count invalidates the first route. Dispatch checks and corrects the load sheet.",
+      "filled": 2,
+      "height": 389.6953125,
+      "overflow": false,
+      "stage": "1",
+      "width": 375
+    },
+    {
+      "caption": "The revised route meets capacity and timing requirements. The result can be checked.",
+      "filled": 3,
+      "height": 389.6953125,
+      "overflow": false,
+      "stage": "2",
+      "width": 375
+    },
+    {
+      "caption": "The task, the correction, and a verified outcome belong to the same working record.",
+      "filled": 0,
+      "height": 389.6953125,
+      "overflow": false,
+      "stage": "3",
+      "width": 375
+    },
+    {
+      "caption": "An incorrect pallet count invalidates the first route. Dispatch checks and corrects the load sheet.",
+      "filled": 2,
+      "height": 398.9765625,
+      "overflow": false,
+      "stage": "1",
+      "width": 768
+    },
+    {
+      "caption": "The revised route meets capacity and timing requirements. The result can be checked.",
+      "filled": 3,
+      "height": 398.9765625,
+      "overflow": false,
+      "stage": "2",
+      "width": 768
+    },
+    {
+      "caption": "The task, the correction, and a verified outcome belong to the same working record.",
+      "filled": 0,
+      "height": 398.9765625,
+      "overflow": false,
+      "stage": "3",
+      "width": 768
+    },
+    {
+      "caption": "A delivery appointment changes. Dispatch needs a route that meets the new window.",
+      "filled": 1,
+      "height": 398.9765625,
+      "overflow": false,
+      "stage": "0",
+      "width": 768
+    },
+    {
+      "caption": "The revised route meets capacity and timing requirements. The result can be checked.",
+      "filled": 3,
+      "height": 402,
+      "overflow": false,
+      "stage": "2",
+      "width": 1440
+    },
+    {
+      "caption": "The task, the correction, and a verified outcome belong to the same working record.",
+      "filled": 0,
+      "height": 402,
+      "overflow": false,
+      "stage": "3",
+      "width": 1440
+    },
+    {
+      "caption": "A delivery appointment changes. Dispatch needs a route that meets the new window.",
+      "filled": 1,
+      "height": 402,
+      "overflow": false,
+      "stage": "0",
+      "width": 1440
+    },
+    {
+      "caption": "An incorrect pallet count invalidates the first route. Dispatch checks and corrects the load sheet.",
+      "filled": 2,
+      "height": 402,
+      "overflow": false,
+      "stage": "1",
+      "width": 1440
+    }
+  ]
+}
