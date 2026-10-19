@@ -1,0 +1,36 @@
+{
+  "phases": [
+    "contact",
+    "contact",
+    "valuation"
+  ],
+  "values": [
+    "Local QA & Partners",
+    "Local QA event",
+    "Local QA event"
+  ],
+  "contactEditRefreshesSubmission": true,
+  "finalUsesLatestContact": true,
+  "topLevelKeys": [
+    "form",
+    "name",
+    "company",
+    "email",
+    "phone",
+    "vertical",
+    "volume",
+    "labeled",
+    "exclusive",
+    "licensedBefore",
+    "valuationLow",
+    "valuationHigh",
+    "ref",
+    "message",
+    "referredBy"
+  ],
+  "valuation": [
+    243000,
+    972000
+  ],
+  "externalCalls": 0
+}

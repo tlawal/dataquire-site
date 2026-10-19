@@ -147,7 +147,7 @@ function pageHero(eyebrow, title, intro, dark) {
 
 function defaultEstimator() {
   return {
-    step: 0, type: "", systems: [], showSystems: false, name: "", company: "", email: "", phone: "",
+    step: 0, type: "", systems: [], showSystems: false, name: "", company: "", email: "", phone: "", referredBy: "",
     vertical: "", volume: "", structured: "", exclusive: "", licensedBefore: "", companySize: "",
     years: "", coreSystem: "", coreYears: "", exportReadiness: "", provenance: "", hasVideo: "",
     format: "", updated: "", domain: "", taskCount: "", graders: "", headless: "", owned: "",
@@ -275,7 +275,7 @@ function estimatorSystems(state) {
 }
 
 function contactFields(state) {
-  return '<h2>Who should we send this to?</h2><p>Continuing sends your contact details and answers so far to DataQuire. The complete valuation is sent only when you request it on the result screen. No files are uploaded here.</p><div class="field-grid" style="margin-top:24px"><div class="field"><label for="est-name">Name</label><input id="est-name" data-estimator-field="name" value="' + esc(state.name) + '" autocomplete="name" required></div><div class="field"><label for="est-company">Company</label><input id="est-company" data-estimator-field="company" value="' + esc(state.company) + '" autocomplete="organization" required></div><div class="field"><label for="est-email">Work email</label><input id="est-email" data-estimator-field="email" type="email" value="' + esc(state.email) + '" autocomplete="email" required></div><div class="field"><label for="est-phone">Phone <span style="font-weight:400">(optional)</span></label><input id="est-phone" data-estimator-field="phone" type="tel" value="' + esc(state.phone) + '" autocomplete="tel"></div></div>';
+  return '<h2>Who should we send this to?</h2><p>Continuing sends your contact details and answers so far to DataQuire. The complete valuation is sent only when you request it on the result screen. No files are uploaded here.</p><div class="field-grid" style="margin-top:24px"><div class="field"><label for="est-name">Name</label><input id="est-name" data-estimator-field="name" value="' + esc(state.name) + '" autocomplete="name" required></div><div class="field"><label for="est-company">Company</label><input id="est-company" data-estimator-field="company" value="' + esc(state.company) + '" autocomplete="organization" required></div><div class="field"><label for="est-email">Work email</label><input id="est-email" data-estimator-field="email" type="email" value="' + esc(state.email) + '" autocomplete="email" required></div><div class="field"><label for="est-phone">Phone <span style="font-weight:400">(optional)</span></label><input id="est-phone" data-estimator-field="phone" type="tel" value="' + esc(state.phone) + '" autocomplete="tel"></div><div class="field span-2"><label for="est-referred-by">Who sent you our way? <span style="font-weight:400">(optional)</span></label><input id="est-referred-by" type="text" data-estimator-field="referredBy" value="' + esc(state.referredBy) + '" placeholder="A person, company, or event" aria-describedby="est-referred-by-help"><p class="field-hint" id="est-referred-by-help">So we can thank them.</p></div></div><p class="save-note contact-use-note">We only use this to send your estimate and follow up about it. No newsletters.</p>';
 }
 
 async function captureContactDraft(button) {
@@ -897,7 +897,7 @@ function restoreReferral() {
 
 function switchEstimatorType(state, type) {
   const next=defaultEstimator();
-  for (const key of ["name","company","email","phone","fastSize","fastVertical"]) if (state[key] !== undefined) next[key]=state[key];
+  for (const key of ["name","company","email","phone","referredBy","fastSize","fastVertical"]) if (state[key] !== undefined) next[key]=state[key];
   next.type=type;
   return next;
 }
@@ -908,7 +908,7 @@ function setEstimatorField(field, value) {
     estimatorState.submissionId="";
     estimatorState.draftDelivered=false;
   }
-  if (["name","company","email"].includes(field) && estimatorState[field] !== value) {
+  if (["name","company","email","referredBy"].includes(field) && estimatorState[field] !== value) {
     if (estimatorState.draftDelivered) estimatorState.submissionId="";
     estimatorState.draftDelivered=false;
   }

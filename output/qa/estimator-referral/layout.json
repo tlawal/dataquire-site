@@ -1,0 +1,38 @@
+[
+  {
+    "afterPhone": true,
+    "helper": "So we can thank them.",
+    "note": "We only use this to send your estimate and follow up about it. No newsletters.",
+    "noteSize": "12px",
+    "optional": true,
+    "overflow": false,
+    "placeholder": "A person, company, or event",
+    "type": "text",
+    "value": "  Local QA & Partners  ",
+    "width": 375
+  },
+  {
+    "afterPhone": true,
+    "helper": "So we can thank them.",
+    "note": "We only use this to send your estimate and follow up about it. No newsletters.",
+    "noteSize": "12px",
+    "optional": true,
+    "overflow": false,
+    "placeholder": "A person, company, or event",
+    "type": "text",
+    "value": "  Local QA & Partners  ",
+    "width": 768
+  },
+  {
+    "afterPhone": true,
+    "helper": "So we can thank them.",
+    "note": "We only use this to send your estimate and follow up about it. No newsletters.",
+    "noteSize": "12px",
+    "optional": true,
+    "overflow": false,
+    "placeholder": "A person, company, or event",
+    "type": "text",
+    "value": "  Local QA & Partners  ",
+    "width": 1440
+  }
+]

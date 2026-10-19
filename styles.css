@@ -1493,6 +1493,15 @@ form > .button {
   line-height: 1.65;
   margin-top: 20px;
 }
+.field-hint {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 6px 0 0;
+}
+.quiz-body .contact-use-note {
+  font-size: 12px;
+}
 .system-list {
   margin-top: 20px;
 }

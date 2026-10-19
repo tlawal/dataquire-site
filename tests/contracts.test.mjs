@@ -45,9 +45,10 @@ test("contact, email and required data validate before progress", () => {
   for (const value of ["","owner","bad@address","x y@example.com"]) assert.equal(validEmail(value),false);
 });
 test("switching branches starts a fresh submission and clears unrelated history", () => {
-  const state={...defaultEstimator(),type:"records",name:"QA",company:"TEST",email:"qa@example.com",systems:["Slack"],systemHistory:{Slack:6},coreSystem:"Slack",submitted:true,draftDelivered:true,submissionId:"old-id",vertical:"Legal",step:4};
+  const state={...defaultEstimator(),type:"records",name:"QA",company:"TEST",email:"qa@example.com",referredBy:"A local event",systems:["Slack"],systemHistory:{Slack:6},coreSystem:"Slack",submitted:true,draftDelivered:true,submissionId:"old-id",vertical:"Legal",step:4};
   const next=switchEstimatorType(state,"dataset");
   assert.equal(next.name,"QA");
+  assert.equal(next.referredBy,"A local event");
   assert.equal(next.type,"dataset");
   assert.equal(next.step,0);
   assert.equal(next.submitted,false);
@@ -84,6 +85,32 @@ test("full branch payloads preserve the form contract and omit irrelevant data",
   assert.equal(JSON.parse(draft.message).phase,"contact");
   for(const form of ["Buyers","Partners","Refer","Contact","Ledger","Session"]) assert.equal(requestPayload(form,{email:"example@example.com"},null,"id").form,form);
 });
+test("optional referredBy reaches the webhook in both estimator phases and stays separate from attribution",async()=>{
+  const attribution=claimAttribution(null,referralCode("tracked@example.com"),new Date("2026-10-19T12:00:00Z"));
+  let received;
+  const receiver=async (_url,options)=>{received=JSON.parse(options.body);return new Response('{"ok":true}',{status:200});};
+  for(const type of ["records","dataset","rl","video"]) {
+    const state={...defaultEstimator(),type,name:"QA",company:"Local QA",email:"qa@example.com",referredBy:'  Local "Referral" & Event  '};
+    assert.deepEqual(validationForStep("Contact",{...state,referredBy:""}),[]);
+    for(const phase of ["contact","valuation"]) {
+      const payload=estimatorPayload(state,attribution,"referred-by-"+type+"-"+phase,phase);
+      assert.equal(payload.referredBy,'Local "Referral" & Event');
+      assert.equal(JSON.parse(payload.message).referredBy,payload.referredBy);
+      assert.equal(payload.ref,"tracked@example.com");
+      assert.equal((await forwardLead(payload,receiver)).status,200);
+      assert.equal(received.referredBy,payload.referredBy);
+      assert.equal(received.ref,"tracked@example.com");
+    }
+    assert.equal(estimatorPayload({...state,referredBy:""},null,"blank-"+type).referredBy,"");
+  }
+  const ledger=requestPayload("Ledger",{email:"qa@example.com"},null,"ledger-without-referral");
+  assert.equal(Object.hasOwn(ledger,"referredBy"),false);
+  await forwardLead({...ledger,referredBy:"unrequested"},receiver);
+  assert.equal(Object.hasOwn(received,"referredBy"),false);
+  const home=parseHTML(routeContent("/")).document;
+  assert.equal(home.querySelector('form[data-form="Ledger"]').querySelector('[data-estimator-field="referredBy"]'),null);
+  assert.doesNotMatch(home.toString(),/No newsletters\./);
+});
 test("delivery uses the confirmed JSON contract and requires confirmed persistence", async () => {
   let request;
   const fake=async (url,options) => {request={url,...options}; return new Response(JSON.stringify({success:true}),{status:200});};
@@ -104,7 +131,7 @@ test("the relay keeps the exact flat contract and deduplicates acknowledged requ
   assert.equal((await forwardLead(input,mock)).status,200);
   assert.equal((await forwardLead(input,mock)).status,200);
   assert.equal(calls,1);
-  assert.deepEqual(Object.keys(sent),["form","name","company","email","phone","vertical","volume","labeled","exclusive","licensedBefore","valuationLow","valuationHigh","ref","message"]);
+  assert.deepEqual(Object.keys(sent),["form","name","company","email","phone","vertical","volume","labeled","exclusive","licensedBefore","valuationLow","valuationHigh","ref","message","referredBy"]);
   assert.equal((await forwardLead({...input,email:"bad"},mock)).status,400);
   assert.equal((await forwardLead({...input,message:"another request"},async()=>new Response('{"ok":false}'))).status,502);
 });

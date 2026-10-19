@@ -7,6 +7,7 @@ export interface EstimatorState {
   companySize?: string; years?: string; coreSystem?: string; coreYears?: string;
   exportReadiness?: string; provenance?: string; systemHistory?: Record<string, number>;
   otherSystems?: string;
+  referredBy?: string;
 }
 export interface Attribution {
   code: string; email: string; firstSeenAt: string; expiresAt: string;
@@ -17,4 +18,5 @@ export interface WebhookPayload {
   form: string; name: string; company: string; email: string; phone: string;
   vertical: string; volume: string; labeled: string; exclusive: string; licensedBefore: string;
   valuationLow: number; valuationHigh: number; ref: string; message: string;
+  referredBy?: string;
 }

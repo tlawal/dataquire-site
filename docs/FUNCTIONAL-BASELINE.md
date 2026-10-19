@@ -175,3 +175,11 @@ Copy can be rewritten while preserving these provisions and qualifications:
 Run `npm run verify` after the presentation is rebuilt. The new regression checks are intentionally independent of prose and styling; existing editorial expectations may be adjusted for new phrasing without weakening the preserved business constraints.
 
 Use a local browser with intercepted/mock acknowledged submissions to verify every estimator branch, Contact draft behavior, recovery after failed delivery, result submission, saved-answer recovery/clearing, regular forms, referral links/QR/lookup, partner calculator, co-branding/printing, protected areas, consent and settings, mobile navigation, focus/error behavior, and reduced motion. Do not generate test leads in the real production webhook.
+
+## Authorized estimator referral extension, October 19, 2026
+
+The estimator now adds optional `referredBy` state, defaulting to an empty string. It persists with saved drafts, survives branch switches, and is cleared with saved answers. Contact validation still requires only name, company, and a valid email. Editing this contact answer after capture refreshes contact submission identity using the existing contact-edit behavior.
+
+Estimator submissions add a flat `referredBy` key and `message.referredBy` in both contact and valuation phases. Text is trimmed before submission. The relay explicitly forwards this key only for `Estimator`; other forms retain their original fourteen-key flat contract. The existing `ref` field and first-link attribution remain separate and unchanged. The webhook creates new columns automatically, so no sheet changes are required.
+
+The original baseline fixture is preserved. Hash checks remove only the exact authorized referral-field additions in the model, relay, and types before comparing against original file hashes. Every other frozen byte, all representative valuation outputs and legacy payload values, referral economics, and legal provisions remain protected. The no-newsletters statement belongs only to the estimator contact step. The Ledger remains a separate newsletter signup.

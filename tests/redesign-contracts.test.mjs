@@ -8,6 +8,21 @@ import {estimate, flow, estimatorPayload, referralCode, claimAttribution} from "
 
 const baseline=JSON.parse(await fs.readFile(new URL("./fixtures/redesign-baseline.json",import.meta.url),"utf8"));
 
+// October 19: only these explicit additions are authorized on the frozen modules.
+// Removing them must reproduce the original bytes, including all valuation math.
+const referredByAdditions = {
+  "lib/model.js":[
+    ['    ...(form === "Estimator" ? {referredBy: fields.referredBy || ""} : {}),\n',1],
+    ['    referredBy: (state.referredBy || "").trim(),\n',1]
+  ],
+  "lib/webhook-proxy.js":[['  if (body.form === "Estimator") payload.referredBy = body.referredBy ?? "";\n',1]],
+  "types/contracts.d.ts":[['  referredBy?: string;\n',2]]
+};
+
+function withReferralField(payload) {
+  return {...payload,referredBy:"",message:{...payload.message,referredBy:""}};
+}
+
 function stablePayload(payload) {
   const details=JSON.parse(payload.message);
   delete details.submittedAt;
@@ -27,9 +42,13 @@ function sortedFields(fields) {
   return fields.toSorted((a,b)=>(a.name+":"+(a.value||"")).localeCompare(b.name+":"+(b.value||"")));
 }
 
-test("redesign leaves the frozen valuation, delivery, relay, configuration and server modules byte-for-byte unchanged",async()=>{
+test("frozen modules retain their original bytes apart from the authorized optional referral field",async()=>{
   for(const [file,expected] of Object.entries(baseline.frozenSha256)) {
-    const bytes=await fs.readFile(new URL("../"+file,import.meta.url));
+    let bytes=await fs.readFile(new URL("../"+file,import.meta.url),"utf8");
+    for(const [addition,count] of referredByAdditions[file] || []) {
+      assert.equal(bytes.split(addition).length-1,count,file+" authorized extension");
+      bytes=bytes.replaceAll(addition,"");
+    }
     assert.equal(crypto.createHash("sha256").update(bytes).digest("hex"),expected,file+" changed after the baseline was frozen");
   }
 });
@@ -48,7 +67,7 @@ test("all established routes and each submitted form field retain their integrat
 });
 
 test("redesign retains estimator state names and required answers on every branch",()=>{
-  assert.deepEqual(Object.keys(defaultEstimator()).sort(),Object.keys(baseline.defaultEstimator).sort());
+  assert.deepEqual(defaultEstimator(),{...baseline.defaultEstimator,referredBy:""});
   for(const item of baseline.validation) {
     assert.deepEqual(validationForStep(item.step,{...defaultEstimator(),type:item.type}),item.missing,item.type+" "+item.step);
   }
@@ -59,8 +78,8 @@ test("representative records, dataset, RL and video fixtures retain identical va
     assert.deepEqual(estimate(fixture.state),fixture.estimate,fixture.name+" estimate");
     assert.deepEqual(flow(fixture.state),fixture.flow,fixture.name+" flow");
     const id=fixture.payload.message.submissionId;
-    assert.deepEqual(stablePayload(estimatorPayload(fixture.state,baseline.attribution,id)),fixture.payload,fixture.name+" valuation payload");
-    assert.deepEqual(stablePayload(estimatorPayload(fixture.state,baseline.attribution,id,"contact")),fixture.contactPayload,fixture.name+" contact draft payload");
+    assert.deepEqual(stablePayload(estimatorPayload(fixture.state,baseline.attribution,id)),withReferralField(fixture.payload),fixture.name+" valuation payload");
+    assert.deepEqual(stablePayload(estimatorPayload(fixture.state,baseline.attribution,id,"contact")),withReferralField(fixture.contactPayload),fixture.name+" contact draft payload");
   }
 });
 
